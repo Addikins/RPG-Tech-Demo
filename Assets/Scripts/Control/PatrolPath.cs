@@ -5,9 +5,10 @@ namespace RPG.Control
 {
     public class PatrolPath : MonoBehaviour
     {
+        // Called by Unity during editing
         private void OnDrawGizmos()
         {
-            const float waypointGizmoRadius = 0.5f;
+            const float waypointGizmoRadius = 0.3f;
 
             for (int i = 0; i < transform.childCount; i++)
             {
