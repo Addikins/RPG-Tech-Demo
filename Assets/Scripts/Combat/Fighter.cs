@@ -10,9 +10,16 @@ namespace RPG.Combat
         [SerializeField] float weaponRange = 2f;
         [SerializeField] float timeBetweenAttacks = 1f;
         [SerializeField] float damage = 5f;
+        [SerializeField] float combatSpeedMultiplier = 1f;
 
         Health target;
         float timeSinceLastAttack = Mathf.Infinity;
+
+        private void Start() {
+            if (this.tag == "Enemy") {
+                combatSpeedMultiplier = .8f;
+            }
+        }
 
         private void Update()
         {
@@ -23,7 +30,7 @@ namespace RPG.Combat
 
             if (target != null && !GetIsInRange())
             {
-                GetComponent<Mover>().MoveTo(target.transform.position);
+                GetComponent<Mover>().MoveTo(target.transform.position, combatSpeedMultiplier);
             }
             else
             {

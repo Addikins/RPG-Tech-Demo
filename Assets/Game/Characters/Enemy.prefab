@@ -40,8 +40,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chaseDistance: 5
   suspicionTime: 5
+  idleTime: 2
   patrolPath: {fileID: 0}
   waypointTolerance: 1
+  patrolSpeedMultiplier: 0.2
 --- !u!1001 &6283602139897360616
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52,6 +54,11 @@ PrefabInstance:
     - target: {fileID: 8903870222378059208, guid: 7ffdd5ee6913cd549be87999555c6de0,
         type: 3}
       propertyPath: m_Name
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8903870222378059208, guid: 7ffdd5ee6913cd549be87999555c6de0,
+        type: 3}
+      propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 945066719576482166, guid: 7ffdd5ee6913cd549be87999555c6de0,

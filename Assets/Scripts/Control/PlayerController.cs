@@ -10,6 +10,9 @@ namespace RPG.Control
 {
     public class PlayerController : MonoBehaviour
     {
+        [Range(0, 1)]
+        [SerializeField] float playerSpeed = 1f;
+
         Health health;
 
         private void Start() {
@@ -59,7 +62,7 @@ namespace RPG.Control
             {
                 if (Input.GetMouseButton(0))
                 {
-                    GetComponent<Mover>().StartMoveAction(hit.point);
+                    GetComponent<Mover>().StartMoveAction(hit.point, playerSpeed);
                 }
                 return true;
             }
