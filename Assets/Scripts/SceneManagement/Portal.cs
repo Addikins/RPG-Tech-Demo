@@ -28,6 +28,11 @@ namespace RPG.SceneManagement
 
         private IEnumerator Transition()
         {
+            if (sceneToLoad < 0)
+            {
+                Debug.LogError("Scene to load is not set.");
+                yield break;
+            }
             DontDestroyOnLoad(gameObject);
             yield return SceneManager.LoadSceneAsync(sceneToLoad);
 
@@ -41,8 +46,7 @@ namespace RPG.SceneManagement
         {
             foreach (Portal portal in FindObjectsOfType<Portal>())
             {
-                if (portal == this) continue;
-
+                if (portal == this || portal.destination != destination) continue;
                 return portal;
             }
 
