@@ -11,14 +11,20 @@ namespace RPG.Combat
         [SerializeField] float timeBetweenAttacks = 1f;
         [SerializeField] float damage = 5f;
         [SerializeField] float combatSpeedMultiplier = 1f;
+        [SerializeField] GameObject weaponPrefab = null;
+        [SerializeField] Transform handTransform = null;
+        [SerializeField] AnimatorOverrideController weaponOverride = null;
 
         Health target;
         float timeSinceLastAttack = Mathf.Infinity;
 
-        private void Start() {
-            if (this.tag == "Enemy") {
+        private void Start()
+        {
+            if (this.tag == "Enemy")
+            {
                 combatSpeedMultiplier = .8f;
             }
+            SpawnWeapon();
         }
 
         private void Update()
@@ -39,6 +45,13 @@ namespace RPG.Combat
             }
         }
 
+        private void SpawnWeapon()
+        {
+            Instantiate(weaponPrefab, handTransform);
+            Animator animator = GetComponent<Animator>();
+
+            animator.runtimeAnimatorController = weaponOverride;
+        }
 
         private void AttackBehavior()
         {
