@@ -45,7 +45,6 @@ namespace RPG.Control
 
             if (InAttackRange(player) && fighter.CanAttack(player))
             {
-
                 AttackBehavior();
             }
             else if (timeSinceLastSawPlayer < suspicionTime)
