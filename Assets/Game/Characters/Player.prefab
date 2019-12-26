@@ -38,10 +38,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character_Knights_Soldier_01
       objectReference: {fileID: 0}
-    - target: {fileID: 13787996, guid: 30cf93deff988e74e88a144bd2127c18, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 3f6fc0cf5e5d31c458bc74ede87cb8ae, type: 2}
     - target: {fileID: 417656, guid: 30cf93deff988e74e88a144bd2127c18, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -86,12 +82,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 13787996, guid: 30cf93deff988e74e88a144bd2127c18, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3f6fc0cf5e5d31c458bc74ede87cb8ae, type: 2}
     - target: {fileID: 2369332, guid: 30cf93deff988e74e88a144bd2127c18, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 01b2546c969fe814794af634cb4534f4, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30cf93deff988e74e88a144bd2127c18, type: 3}
+--- !u!4 &2262078612993945476 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 481036, guid: 30cf93deff988e74e88a144bd2127c18,
+    type: 3}
+  m_PrefabInstance: {fileID: 2262078612994029704}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2262078612993871750 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 423694, guid: 30cf93deff988e74e88a144bd2127c18,
+    type: 3}
+  m_PrefabInstance: {fileID: 2262078612994029704}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2665431780908468662
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -174,6 +186,22 @@ PrefabInstance:
       propertyPath: weaponRange
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4295428977625122563, guid: 7ffdd5ee6913cd549be87999555c6de0,
+        type: 3}
+      propertyPath: leftHandTransform
+      value: 
+      objectReference: {fileID: 2262078612993945476}
+    - target: {fileID: 4295428977625122563, guid: 7ffdd5ee6913cd549be87999555c6de0,
+        type: 3}
+      propertyPath: rightHandTransform
+      value: 
+      objectReference: {fileID: 2262078612993871750}
+    - target: {fileID: 4295428977625122563, guid: 7ffdd5ee6913cd549be87999555c6de0,
+        type: 3}
+      propertyPath: defaultWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: de148dafd10995349ac7e09c1fbf606d,
+        type: 2}
     - target: {fileID: 4145543459893269406, guid: 7ffdd5ee6913cd549be87999555c6de0,
         type: 3}
       propertyPath: uniqueIdentifier
