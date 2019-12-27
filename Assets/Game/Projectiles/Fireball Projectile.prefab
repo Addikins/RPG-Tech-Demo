@@ -51,6 +51,10 @@ MonoBehaviour:
   isHoming: 1
   hitEffect: {fileID: 2302457091093092515, guid: 69d1b1037536b504884c93bb73d662db,
     type: 3}
+  maxLifeTime: 5
+  destroyOnImpact:
+  - {fileID: 1152962099279622188}
+  lifeAfterImpact: 0.2
 --- !u!65 &6109965293743944060
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4976,11 +4980,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: ab1112643ee572748b01dede71158272, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
-      value: 0.1
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: ab1112643ee572748b01dede71158272, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 0.25
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: ab1112643ee572748b01dede71158272, type: 3}
       propertyPath: VelocityModule.enabled
@@ -4988,11 +4992,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: ab1112643ee572748b01dede71158272, type: 3}
       propertyPath: lengthInSec
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: ab1112643ee572748b01dede71158272, type: 3}
       propertyPath: prewarm
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: ab1112643ee572748b01dede71158272, type: 3}
       propertyPath: ClampVelocityModule.enabled
@@ -5000,7 +5004,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: ab1112643ee572748b01dede71158272, type: 3}
       propertyPath: InitialModule.maxNumParticles
-      value: 500
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: ab1112643ee572748b01dede71158272, type: 3}
       propertyPath: InitialModule.gravityModifier.scalar
