@@ -43,6 +43,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 1
+--- !u!114 &3427329928760398055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6876260919355362430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea42d5a42a87b384cb9e50c4f74eeebe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  experiencePoints: 0
 --- !u!1001 &2262078612994029704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -192,6 +205,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7770263450027844352, guid: 7ffdd5ee6913cd549be87999555c6de0,
+        type: 3}
+      propertyPath: characterClass
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4367976950753793216, guid: 7ffdd5ee6913cd549be87999555c6de0,
         type: 3}
       propertyPath: healthPoints
@@ -217,11 +235,6 @@ PrefabInstance:
         type: 3}
       propertyPath: uniqueIdentifier
       value: player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7770263450027844352, guid: 7ffdd5ee6913cd549be87999555c6de0,
-        type: 3}
-      propertyPath: characterClass
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ffdd5ee6913cd549be87999555c6de0, type: 3}

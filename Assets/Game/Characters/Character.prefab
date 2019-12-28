@@ -147,7 +147,6 @@ MonoBehaviour:
   rightHandTransform: {fileID: 0}
   leftHandTransform: {fileID: 0}
   defaultWeapon: {fileID: 0}
-  defaultWeaponName: Unarmed
 --- !u!114 &1795739094
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,13 +13,12 @@ namespace RPG.Combat
         [SerializeField] Transform rightHandTransform = null;
         [SerializeField] Transform leftHandTransform = null;
         [SerializeField] Weapon defaultWeapon = null;
-        [SerializeField] string defaultWeaponName = "Unarmed";
 
         Health target;
         float timeSinceLastAttack = Mathf.Infinity;
         Weapon currentWeapon = null;
 
-        private void Start()
+        private void Awake()
         {
             if (currentWeapon == null)
             {
@@ -52,6 +51,11 @@ namespace RPG.Combat
             weapon.Spawn(rightHandTransform, leftHandTransform, animator);
         }
 
+        public Health GetTarget()
+        {
+            return target;
+        }
+
         private void AttackBehavior()
         {
             transform.LookAt(target.transform);
@@ -81,11 +85,11 @@ namespace RPG.Combat
             if (target == null) { return; }
             if (currentWeapon.HasProjectile())
             {
-                currentWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, target);
+                currentWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, target, gameObject);
             }
             else
             {
-                target.TakeDamage(currentWeapon.GetWeaponDamage());
+                target.TakeDamage(gameObject ,currentWeapon.GetWeaponDamage());
             }
         }
 
