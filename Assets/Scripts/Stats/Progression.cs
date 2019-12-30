@@ -1,11 +1,8 @@
 using UnityEngine;
-using RPG.Stats;
 using System.Collections.Generic;
-using System;
 
 namespace RPG.Stats
 {
-
     [CreateAssetMenu(fileName = "Progression", menuName = "Stats/New Progression", order = 0)]
     public class Progression : ScriptableObject
     {
