@@ -205,15 +205,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7770263450027844352, guid: 7ffdd5ee6913cd549be87999555c6de0,
-        type: 3}
-      propertyPath: characterClass
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4367976950753793216, guid: 7ffdd5ee6913cd549be87999555c6de0,
         type: 3}
       propertyPath: healthPoints
       value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 4145543459893269406, guid: 7ffdd5ee6913cd549be87999555c6de0,
+        type: 3}
+      propertyPath: uniqueIdentifier
+      value: player
       objectReference: {fileID: 0}
     - target: {fileID: 4295428977625122563, guid: 7ffdd5ee6913cd549be87999555c6de0,
         type: 3}
@@ -231,10 +231,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: de148dafd10995349ac7e09c1fbf606d,
         type: 2}
-    - target: {fileID: 4145543459893269406, guid: 7ffdd5ee6913cd549be87999555c6de0,
+    - target: {fileID: 7770263450027844352, guid: 7ffdd5ee6913cd549be87999555c6de0,
         type: 3}
-      propertyPath: uniqueIdentifier
-      value: player
+      propertyPath: characterClass
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ffdd5ee6913cd549be87999555c6de0, type: 3}
