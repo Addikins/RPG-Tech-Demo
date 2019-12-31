@@ -5,7 +5,8 @@ namespace RPG.Stats
         Player,
         Pawn,
         Mage,
-        Archer
+        Archer,
+        Beefy
     }
 
 }

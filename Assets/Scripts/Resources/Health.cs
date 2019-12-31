@@ -2,7 +2,6 @@ using UnityEngine;
 using RPG.Saving;
 using RPG.Stats;
 using RPG.Core;
-using System;
 
 namespace RPG.Resources
 {
@@ -49,6 +48,11 @@ namespace RPG.Resources
             return healthPoints;
         }
 
+        public float GetAttackDamage()
+        {
+            return baseStats.GetStat(Stat.Damage);
+        }
+
         public float GetMaxHealth()
         {
             return GetComponent<BaseStats>().GetStat(Stat.Health);
@@ -66,6 +70,7 @@ namespace RPG.Resources
             isDead = true;
             GetComponent<Animator>().SetTrigger("die");
             GetComponent<ActionScheduler>().CancelCurrentAction();
+            GetComponent<CapsuleCollider>().enabled = false;
         }
 
         private void RegenerateHealth()

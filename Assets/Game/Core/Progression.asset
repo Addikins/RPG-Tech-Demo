@@ -77,3 +77,26 @@ MonoBehaviour:
       - 25
       - 30
       - 35
+  - characterClass: 4
+    stats:
+    - stat: 0
+      levels:
+      - 60
+      - 100
+      - 140
+      - 180
+      - 300
+    - stat: 1
+      levels:
+      - 30
+      - 40
+      - 50
+      - 60
+      - 90
+    - stat: 3
+      levels:
+      - 20
+      - 25
+      - 30
+      - 45
+      - 65
