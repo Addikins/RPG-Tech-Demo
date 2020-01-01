@@ -371,13 +371,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8903870222378059208, guid: 7ffdd5ee6913cd549be87999555c6de0,
         type: 3}
-      propertyPath: m_TagString
-      value: Player
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8903870222378059208, guid: 7ffdd5ee6913cd549be87999555c6de0,
         type: 3}
-      propertyPath: m_Layer
-      value: 2
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 945066719576482166, guid: 7ffdd5ee6913cd549be87999555c6de0,
         type: 3}
@@ -434,15 +434,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4367976950753793216, guid: 7ffdd5ee6913cd549be87999555c6de0,
+    - target: {fileID: 7770263450027844352, guid: 7ffdd5ee6913cd549be87999555c6de0,
         type: 3}
-      propertyPath: healthPoints
-      value: 250
+      propertyPath: characterClass
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4145543459893269406, guid: 7ffdd5ee6913cd549be87999555c6de0,
+    - target: {fileID: 7770263450027844352, guid: 7ffdd5ee6913cd549be87999555c6de0,
         type: 3}
-      propertyPath: uniqueIdentifier
-      value: player
+      propertyPath: levelUpEffect
+      value: 
+      objectReference: {fileID: 7257222898820146034, guid: 3ffab8e9721893a4199ff4d73712c1f4,
+        type: 3}
+    - target: {fileID: 7770263450027844352, guid: 7ffdd5ee6913cd549be87999555c6de0,
+        type: 3}
+      propertyPath: shouldUseModifiers
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4295428977625122563, guid: 7ffdd5ee6913cd549be87999555c6de0,
         type: 3}
@@ -460,10 +466,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: de148dafd10995349ac7e09c1fbf606d,
         type: 2}
-    - target: {fileID: 7770263450027844352, guid: 7ffdd5ee6913cd549be87999555c6de0,
+    - target: {fileID: 4145543459893269406, guid: 7ffdd5ee6913cd549be87999555c6de0,
         type: 3}
-      propertyPath: characterClass
-      value: 0
+      propertyPath: uniqueIdentifier
+      value: player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ffdd5ee6913cd549be87999555c6de0, type: 3}
