@@ -56,6 +56,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 1
+  movementIndicator: {fileID: 1845240806346120, guid: 9206fafa0be7acd4f943729dbd6bebc0,
+    type: 3}
   cursorMappings:
   - type: 0
     texture: {fileID: 2800000, guid: 21628736160fcc9488493401da3ef621, type: 3}
@@ -68,6 +70,9 @@ MonoBehaviour:
     hotspot: {x: 0, y: 0}
   - type: 3
     texture: {fileID: 2800000, guid: 6fdfcd4167ed5e7488584241bb671bb2, type: 3}
+    hotspot: {x: 0, y: 0}
+  - type: 4
+    texture: {fileID: 2800000, guid: f8c873f1e53e83f4aabf342d6be1dfc3, type: 3}
     hotspot: {x: 0, y: 0}
 --- !u!1001 &2262078612994029704
 PrefabInstance:

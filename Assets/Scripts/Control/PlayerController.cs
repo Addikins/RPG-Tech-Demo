@@ -3,6 +3,7 @@ using RPG.Movement;
 using RPG.Combat;
 using RPG.Resources;
 using UnityEngine.EventSystems;
+using System;
 
 namespace RPG.Control
 {
@@ -10,16 +11,9 @@ namespace RPG.Control
     {
         [Range(0, 1)]
         [SerializeField] float playerSpeed = 1f;
+        [SerializeField] GameObject movementIndicator;
 
         Health health;
-
-        enum CursorType
-        {
-            None,
-            Movement,
-            Combat,
-            UI,
-        }
 
         [System.Serializable]
         struct CursorMapping
@@ -48,11 +42,29 @@ namespace RPG.Control
                 return;
             }
 
-            //Indicates wether hovering over a CombatTarget
-            if (InteractWithCombat()) return;
+            if (InteractWithComponent()) { return; }
+
             //Indicates whether hovering over anything at all
-            if (InteractWithMovement()) return;
+            if (InteractWithMovement()) { return; }
             SetCursor(CursorType.None);
+        }
+
+        private bool InteractWithComponent()
+        {
+            RaycastHit[] hits = Physics.RaycastAll(GetMouseRay());
+            foreach (RaycastHit hit in hits)
+            {
+                IRaycastable[] raycastables = hit.transform.GetComponents<IRaycastable>();
+                foreach (IRaycastable raycastable in raycastables)
+                {
+                    if (raycastable.HandleRaycast(this))
+                    {
+                        SetCursor(raycastable.GetCursorType());
+                        return true;
+                    }
+                }
+            }
+            return false;
         }
 
         private bool InteractWithUI()
@@ -60,29 +72,6 @@ namespace RPG.Control
             if (EventSystem.current.IsPointerOverGameObject())
             {
                 SetCursor(CursorType.UI);
-                return true;
-            }
-            return false;
-        }
-
-        private bool InteractWithCombat()
-        {
-            RaycastHit[] hits = Physics.RaycastAll(GetMouseRay());
-            foreach (RaycastHit hit in hits)
-            {
-                CombatTarget target = hit.transform.GetComponent<CombatTarget>();
-                if (target == null) continue;
-
-                if (!GetComponent<Fighter>().CanAttack(target.gameObject))
-                {
-                    continue;
-                }
-
-                if (Input.GetMouseButton(0))
-                {
-                    GetComponent<Fighter>().Attack(target.gameObject);
-                }
-                SetCursor(CursorType.Combat);
                 return true;
             }
             return false;
@@ -97,6 +86,8 @@ namespace RPG.Control
                 if (Input.GetMouseButton(0))
                 {
                     GetComponent<Mover>().StartMoveAction(hit.point, playerSpeed);
+
+                    Instantiate(movementIndicator, (hit.point + (Vector3.up / 4)), Quaternion.identity);
                 }
                 SetCursor(CursorType.Movement);
                 return true;
