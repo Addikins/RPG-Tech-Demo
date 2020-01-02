@@ -38,13 +38,12 @@ namespace RPG.Control
             }
             if (health.IsDead())
             {
-                SetCursor(CursorType.None);
+                SetCursor(CursorType.Dead);
                 return;
             }
 
             if (InteractWithComponent()) { return; }
 
-            //Indicates whether hovering over anything at all
             if (InteractWithMovement()) { return; }
             SetCursor(CursorType.None);
         }
@@ -86,8 +85,10 @@ namespace RPG.Control
                 if (Input.GetMouseButton(0))
                 {
                     GetComponent<Mover>().StartMoveAction(hit.point, playerSpeed);
-
-                    Instantiate(movementIndicator, (hit.point + (Vector3.up / 4)), Quaternion.identity);
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        Instantiate(movementIndicator, (hit.point + (Vector3.up / 10)), Quaternion.Euler(-90, 0, 0));
+                    }
                 }
                 SetCursor(CursorType.Movement);
                 return true;
