@@ -25,10 +25,6 @@ namespace RPG.Combat
         private void Awake()
         {
             currentWeapon = new LazyValue<Weapon>(SetupDefaultWeapon);
-            // if (currentWeapon == null)
-            // {
-            //     EquipWeapon(defaultWeapon);
-            // }
         }
 
         private void Start()
