@@ -1172,7 +1172,7 @@ GameObject:
   - component: {fileID: 1663815020189289973}
   - component: {fileID: 5333527931324303163}
   - component: {fileID: 2124149888268394862}
-  - component: {fileID: 6555797543713277722}
+  - component: {fileID: 919183780418211529}
   m_Layer: 5
   m_Name: Enemy Level
   m_TagString: Untagged
@@ -1241,7 +1241,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 1
---- !u!114 &6555797543713277722
+--- !u!114 &919183780418211529
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1250,7 +1250,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7716482150027532342}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fd5de72c48517b4983730afcc07a37a, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c9fce73283995b46898ceecf693483a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8789089380231701650

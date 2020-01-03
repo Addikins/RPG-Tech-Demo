@@ -8,7 +8,6 @@ namespace RPG.Combat
     public class EnemyDamageDisplay : MonoBehaviour
     {
         Fighter fighter;
-        Fighter target = null;
 
         private void Awake()
         {

@@ -8,7 +8,6 @@ namespace RPG.Combat
     public class EnemyHealthDisplay : MonoBehaviour
     {
         Fighter fighter;
-        Fighter target = null;
 
         private void Awake()
         {

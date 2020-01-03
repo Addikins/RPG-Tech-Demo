@@ -62,6 +62,11 @@ namespace RPG.Resources
             return healthPoints.value;
         }
 
+        public float GetCurrentLevel()
+        {
+            return GetComponent<BaseStats>().GetLevel();
+        }
+
         public float GetAttackDamage()
         {
             return GetComponent<BaseStats>().GetStat(Stat.Damage);
