@@ -4,8 +4,9 @@ using RPG.Stats;
 using RPG.Core;
 using GameDevTV.Utils;
 using UnityEngine.Events;
+using System;
 
-namespace RPG.Resources
+namespace RPG.Attributes
 {
     public class Health : MonoBehaviour, ISaveable
     {
@@ -87,7 +88,12 @@ namespace RPG.Resources
 
         public float GetHealthPercentage()
         {
-            return Mathf.Round(healthPoints.value / GetComponent<BaseStats>().GetStat(Stat.Health) * 100);
+            return GetHealthFraction() * 100;
+        }
+
+        public float GetHealthFraction()
+        {
+            return healthPoints.value / GetComponent<BaseStats>().GetStat(Stat.Health);
         }
 
         private void TriggerDeath()
