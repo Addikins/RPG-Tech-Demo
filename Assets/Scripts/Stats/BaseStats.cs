@@ -1,6 +1,7 @@
 using System;
 using GameDevTV.Utils;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace RPG.Stats
 {
@@ -12,6 +13,7 @@ namespace RPG.Stats
         [SerializeField] Progression progression = null;
         [SerializeField] GameObject levelUpEffect = null;
         [SerializeField] bool shouldUseModifiers = false;
+        [SerializeField] UnityEvent levelUpEvent;
 
         public event Action onLevelUp;
 
@@ -63,6 +65,7 @@ namespace RPG.Stats
 
         private void LevelUpEffect()
         {
+            levelUpEvent.Invoke();
             Instantiate(levelUpEffect, transform);
         }
 
