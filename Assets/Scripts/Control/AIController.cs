@@ -13,6 +13,7 @@ namespace RPG.Control
         [SerializeField] float chaseDistance = 5f;
         [SerializeField] float suspicionTime = 5f;
         [SerializeField] float idleTime = 2f;
+        [SerializeField] float shoutDistance = 5f;
         [SerializeField] PatrolPath patrolPath;
         [SerializeField] float waypointTolerance = 1f;
         [Range(0, 1)]
@@ -25,6 +26,7 @@ namespace RPG.Control
 
         float timeSinceLastSawPlayer = Mathf.Infinity;
         float timeSinceArrivedAtWaypoint = Mathf.Infinity;
+        float aggroTime = Mathf.Infinity;
         int currentWaypointIndex = 0;
 
         LazyValue<Vector3> guardPosition;
@@ -45,12 +47,9 @@ namespace RPG.Control
 
         private void Update()
         {
-            if (health.IsDead())
-            {
-                return;
-            }
+            if (health.IsDead()) { return; }
 
-            if (InAttackRange(player) && fighter.CanAttack(player))
+            if (IsAggro(player) && fighter.CanAttack(player))
             {
                 AttackBehavior();
             }
@@ -65,6 +64,12 @@ namespace RPG.Control
             UpdateTimers();
         }
 
+        public void Aggro()
+        {
+            // Sets Timer
+            aggroTime = 0;
+        }
+
         private Vector3 GetGuardPosition()
         {
             return transform.position;
@@ -74,6 +79,7 @@ namespace RPG.Control
         {
             timeSinceLastSawPlayer += Time.deltaTime;
             timeSinceArrivedAtWaypoint += Time.deltaTime;
+            aggroTime += Time.deltaTime;
         }
 
         private void PatrolBehavior()
@@ -120,10 +126,25 @@ namespace RPG.Control
         {
             timeSinceLastSawPlayer = 0;
             fighter.Attack(player);
+
+            AggroMobEnemies();
         }
 
-        private bool InAttackRange(GameObject player)
+        private void AggroMobEnemies()
         {
+            RaycastHit[] hits = Physics.SphereCastAll(transform.position, shoutDistance, Vector3.up, 0);
+            foreach (RaycastHit hit in hits)
+            {
+                AIController enemyInstance = hit.collider.GetComponent<AIController>();
+                if (enemyInstance == null) continue;
+
+                enemyInstance.Aggro();
+            }
+        }
+
+        private bool IsAggro(GameObject player)
+        {
+            if (aggroTime < suspicionTime) { return true; }
             return Vector3.Distance(player.transform.position, transform.position) < chaseDistance;
         }
 

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3327586}
   - component: {fileID: 2319964}
   m_Layer: 0
-  m_Name: SM_Env_Tree_03
+  m_Name: Bush Tree A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

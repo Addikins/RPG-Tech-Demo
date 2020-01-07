@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3348760}
   - component: {fileID: 2311056}
   m_Layer: 0
-  m_Name: SM_Env_Tree_010
+  m_Name: Pointed Tree A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
