@@ -155,6 +155,7 @@ GameObject:
   - component: {fileID: 7807394491682881254}
   - component: {fileID: 3866528386831041442}
   - component: {fileID: 5260430320356316508}
+  - component: {fileID: 5188779381794042570}
   m_Layer: 0
   m_Name: Root Arrow Projectile
   m_TagString: Untagged
@@ -244,6 +245,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.115150586, y: 0.09571094, z: 0.52808344}
   m_Center: {x: 0, y: 0, z: 0.23595828}
+--- !u!54 &5188779381794042570
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330683358637374167}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
 --- !u!1 &7699089082864316302
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,6 +374,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Land Hit
       objectReference: {fileID: 0}
+    - target: {fileID: 4817098955019162737, guid: bf67e99a3e0c80f4a82c1cd7145798c8,
+        type: 3}
+      propertyPath: audioClips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817098955019162737, guid: bf67e99a3e0c80f4a82c1cd7145798c8,
+        type: 3}
+      propertyPath: audioClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 08d49ee41977b9748a6aaa267128c2a7, type: 3}
+    - target: {fileID: 4817098955019162737, guid: bf67e99a3e0c80f4a82c1cd7145798c8,
+        type: 3}
+      propertyPath: audioClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8262cd0ba2069a44f9d37b0dd5f8103d, type: 3}
+    - target: {fileID: 4817098955019162737, guid: bf67e99a3e0c80f4a82c1cd7145798c8,
+        type: 3}
+      propertyPath: parentObject
+      value: 
+      objectReference: {fileID: 1330683358637374167}
     - target: {fileID: 1304223970109420586, guid: bf67e99a3e0c80f4a82c1cd7145798c8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -412,26 +449,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4817098955019162737, guid: bf67e99a3e0c80f4a82c1cd7145798c8,
-        type: 3}
-      propertyPath: audioClips.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4817098955019162737, guid: bf67e99a3e0c80f4a82c1cd7145798c8,
-        type: 3}
-      propertyPath: audioClips.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 08d49ee41977b9748a6aaa267128c2a7, type: 3}
-    - target: {fileID: 4817098955019162737, guid: bf67e99a3e0c80f4a82c1cd7145798c8,
-        type: 3}
-      propertyPath: audioClips.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: 8262cd0ba2069a44f9d37b0dd5f8103d, type: 3}
-    - target: {fileID: 4817098955019162737, guid: bf67e99a3e0c80f4a82c1cd7145798c8,
-        type: 3}
-      propertyPath: parentObject
-      value: 
-      objectReference: {fileID: 1330683358637374167}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf67e99a3e0c80f4a82c1cd7145798c8, type: 3}
 --- !u!4 &3465334224834219513 stripped
@@ -464,6 +481,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Launch Projectile
       objectReference: {fileID: 0}
+    - target: {fileID: 2066012344535574937, guid: a1b3c57f49e21734b925923fd070dc51,
+        type: 3}
+      propertyPath: audioClips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066012344535574937, guid: a1b3c57f49e21734b925923fd070dc51,
+        type: 3}
+      propertyPath: audioClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2364bd5c9c3c6684b8408082be8c2d83, type: 3}
+    - target: {fileID: 2066012344535574937, guid: a1b3c57f49e21734b925923fd070dc51,
+        type: 3}
+      propertyPath: audioClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2dcd9e22d0add7d459e527bec1e70a82, type: 3}
+    - target: {fileID: 2066012344535574937, guid: a1b3c57f49e21734b925923fd070dc51,
+        type: 3}
+      propertyPath: parentObject
+      value: 
+      objectReference: {fileID: 1017740108353073096}
     - target: {fileID: 5506704390547048898, guid: a1b3c57f49e21734b925923fd070dc51,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -519,26 +556,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2066012344535574937, guid: a1b3c57f49e21734b925923fd070dc51,
-        type: 3}
-      propertyPath: audioClips.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2066012344535574937, guid: a1b3c57f49e21734b925923fd070dc51,
-        type: 3}
-      propertyPath: audioClips.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 2364bd5c9c3c6684b8408082be8c2d83, type: 3}
-    - target: {fileID: 2066012344535574937, guid: a1b3c57f49e21734b925923fd070dc51,
-        type: 3}
-      propertyPath: audioClips.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: 2dcd9e22d0add7d459e527bec1e70a82, type: 3}
-    - target: {fileID: 2066012344535574937, guid: a1b3c57f49e21734b925923fd070dc51,
-        type: 3}
-      propertyPath: parentObject
-      value: 
-      objectReference: {fileID: 1017740108353073096}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1b3c57f49e21734b925923fd070dc51, type: 3}
 --- !u!4 &1815823952336628334 stripped

@@ -121,6 +121,7 @@ namespace RPG.Attributes
         {
             Experience experience = instigator.GetComponent<Experience>();
             if (experience == null) { return; }
+            if (instigator.GetComponent<Health>().IsDead()) { return; }
 
             experience.GainExperience(GetComponent<BaseStats>().GetStat(Stat.ExperienceReward));
         }

@@ -87,7 +87,7 @@ namespace RPG.Control
             return false;
         }
 
-        private bool InteractWithMovement()
+        public bool InteractWithMovement()
         {
             Vector3 target;
             bool hasHit = RaycastNavMesh(out target);

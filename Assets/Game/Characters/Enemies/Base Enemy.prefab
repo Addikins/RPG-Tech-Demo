@@ -55,7 +55,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chaseDistance: 6
-  suspicionTime: 5
+  suspicionTime: 3
   idleTime: 2
   shoutDistance: 5
   patrolPath: {fileID: 0}

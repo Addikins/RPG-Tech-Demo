@@ -56,7 +56,18 @@ namespace RPG.Combat
 
         private void OnTriggerEnter(Collider other)
         {
+            if (other.tag == "Player") { return; }
+
+            if (other.GetComponent<Collider>() != target.GetComponent<Collider>() || other.GetComponent<TerrainCollider>())
+            {
+                print("Collision with " + other.name);
+                DestroyProjectile();
+            }
+
             if (other.GetComponent<Health>() != target) { return; }
+
+
+
             if (target.IsDead()) { return; }
 
             onProjectileLand.Invoke();
@@ -69,6 +80,11 @@ namespace RPG.Combat
                 Instantiate(hitEffect, GetAimLocation(), transform.rotation);
             }
 
+            DestroyProjectile();
+        }
+
+        private void DestroyProjectile()
+        {
             foreach (GameObject toDestroy in destroyOnImpact)
             {
                 Destroy(toDestroy);

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using RPG.Attributes;
 using RPG.Control;
 using UnityEngine;
@@ -56,9 +57,19 @@ namespace RPG.Combat
         {
             if (Input.GetMouseButtonDown(0))
             {
-                Pickup(callingController.gameObject);
+                if (IsInRange(callingController))
+                {
+                    Pickup(callingController.gameObject);
+                    return true;
+                }
+                callingController.InteractWithMovement();
             }
             return true;
+        }
+
+        private bool IsInRange(PlayerController callingController)
+        {
+            return Vector3.Distance(transform.position, callingController.transform.position) < pickupRange;
         }
 
         public CursorType GetCursorType()
