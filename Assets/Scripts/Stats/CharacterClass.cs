@@ -4,9 +4,12 @@ namespace RPG.Stats
     {
         Player,
         Pawn,
-        Mage,
+        Peasant,
         Archer,
-        Beefy
+        Rook,
+        Knight,
+        Bishop,
+
     }
 
 }

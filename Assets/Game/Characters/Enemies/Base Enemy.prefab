@@ -60,7 +60,7 @@ MonoBehaviour:
   shoutDistance: 5
   patrolPath: {fileID: 0}
   waypointTolerance: 1
-  patrolSpeedMultiplier: 0.2
+  patrolSpeedMultiplier: 0.3
 --- !u!1001 &1080250365605984486
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -220,7 +220,7 @@ PrefabInstance:
     - target: {fileID: 7770263450027844352, guid: 7ffdd5ee6913cd549be87999555c6de0,
         type: 3}
       propertyPath: startingLevel
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1897376397, guid: 7ffdd5ee6913cd549be87999555c6de0, type: 3}
       propertyPath: m_Speed
