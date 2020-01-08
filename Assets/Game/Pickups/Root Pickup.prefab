@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5495930763581899670}
   - component: {fileID: 3116233637885639707}
   - component: {fileID: 5671826411677773883}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Root Pickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,6 +79,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163374659123362271, guid: 38e8048b005ff8d4a92d9f846af6feff,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3163374659123193343, guid: 38e8048b005ff8d4a92d9f846af6feff,
         type: 3}
@@ -159,6 +164,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Pickup Effect
+      objectReference: {fileID: 0}
+    - target: {fileID: 312514030841308960, guid: 14dc855b4399c7a4a999ea5c4255b136,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 314123490509445802, guid: 14dc855b4399c7a4a999ea5c4255b136,
         type: 3}

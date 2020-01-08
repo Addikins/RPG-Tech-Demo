@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6606390920329117071}
   - component: {fileID: 5084722704868234345}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 3866528386831041442}
   - component: {fileID: 5260430320356316508}
   - component: {fileID: 5188779381794042570}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Root Arrow Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,7 +270,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1609170734061916780}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Audio Sources
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,6 +303,10 @@ PrefabInstance:
     - target: {fileID: 1659504181823486, guid: c7f49c6920d49ba468b083941d79f2c0, type: 3}
       propertyPath: m_Name
       value: Simple Arrow
+      objectReference: {fileID: 0}
+    - target: {fileID: 1659504181823486, guid: c7f49c6920d49ba468b083941d79f2c0, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4750687242688692, guid: c7f49c6920d49ba468b083941d79f2c0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -373,6 +377,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Land Hit
+      objectReference: {fileID: 0}
+    - target: {fileID: 8780071923186392243, guid: bf67e99a3e0c80f4a82c1cd7145798c8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4817098955019162737, guid: bf67e99a3e0c80f4a82c1cd7145798c8,
         type: 3}
@@ -480,6 +489,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Launch Projectile
+      objectReference: {fileID: 0}
+    - target: {fileID: 2858416154004169051, guid: a1b3c57f49e21734b925923fd070dc51,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2066012344535574937, guid: a1b3c57f49e21734b925923fd070dc51,
         type: 3}

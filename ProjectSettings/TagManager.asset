@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Pickup Effect
+  - Pickup
   layers:
   - Default
   - TransparentFX
@@ -17,8 +18,8 @@ TagManager:
   - 
   - PostProcessing
   - Terrain
-  - 
-  - 
+  - Ignore Projectile
+  - Projectile
   - 
   - 
   - 

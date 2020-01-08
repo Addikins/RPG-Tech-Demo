@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2910050506160056194}
   - component: {fileID: 6109965293743944060}
   - component: {fileID: 1770321992692451972}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Fireball Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 8892663558797764624}
   - component: {fileID: 2307520459832355869}
   - component: {fileID: 6604842521299672330}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Fireball Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4883,7 +4883,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6417332215108282004}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Audio Sources
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4917,6 +4917,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Launch Projectile
+      objectReference: {fileID: 0}
+    - target: {fileID: 2858416154004169051, guid: a1b3c57f49e21734b925923fd070dc51,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2066012344535574937, guid: a1b3c57f49e21734b925923fd070dc51,
         type: 3}
@@ -5020,6 +5025,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Land Hit
       objectReference: {fileID: 0}
+    - target: {fileID: 8780071923186392243, guid: bf67e99a3e0c80f4a82c1cd7145798c8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4817098955019162737, guid: bf67e99a3e0c80f4a82c1cd7145798c8,
         type: 3}
       propertyPath: audioClips.Array.size
@@ -5121,6 +5131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FX_FlameThrower
       objectReference: {fileID: 0}
+    - target: {fileID: 182542, guid: 5cd5599e01f32bd418f20a3b9eac1c57, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 479346, guid: 5cd5599e01f32bd418f20a3b9eac1c57, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5219,6 +5233,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: ab1112643ee572748b01dede71158272, type: 3}
       propertyPath: m_Name
       value: FX_Smoke
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ab1112643ee572748b01dede71158272, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ab1112643ee572748b01dede71158272, type: 3}
       propertyPath: m_LocalPosition.x

@@ -60,7 +60,6 @@ namespace RPG.Combat
 
             if (other.GetComponent<Collider>() != target.GetComponent<Collider>() || other.GetComponent<TerrainCollider>())
             {
-                print("Collision with " + other.name);
                 DestroyProjectile();
             }
 

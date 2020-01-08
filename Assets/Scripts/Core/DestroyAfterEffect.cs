@@ -37,7 +37,6 @@ namespace RPG.Core
                 if (otherEffect == this) { continue; }
                 if (otherEffect != null && otherEffect.destroyOnSpawn)
                 {
-                    print("Destroying Effect");
                     Destroy(otherEffect.gameObject);
                 }
             }
