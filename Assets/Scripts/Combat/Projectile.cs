@@ -8,6 +8,9 @@ namespace RPG.Combat
     {
         [SerializeField] float speed = 10f;
         [SerializeField] bool isHoming = false;
+        [SerializeField] bool passThroughEnemy = false;
+        [SerializeField] bool passThroughPlayer = false;
+
         [SerializeField] GameObject hitEffect = null;
         [SerializeField] float maxLifeTime = 5f;
         [SerializeField] GameObject[] destroyOnImpact = null;
@@ -56,14 +59,14 @@ namespace RPG.Combat
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.tag == "Player") { return; }
+            if (other.tag == "Player" && passThroughPlayer) { return; }
 
             if (other.GetComponent<Collider>() != target.GetComponent<Collider>() || other.GetComponent<TerrainCollider>())
             {
                 DestroyProjectile();
             }
 
-            if (other.GetComponent<Health>() != target) { return; }
+            if (other.tag == "Enemy" && passThroughEnemy) { return; }
 
 
 

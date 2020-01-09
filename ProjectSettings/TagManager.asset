@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Pickup Effect
   - Pickup
+  - Follow Camera
   layers:
   - Default
   - TransparentFX

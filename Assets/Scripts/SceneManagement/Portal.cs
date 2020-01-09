@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.AI;
-using UnityEngine.Playables;
 using RPG.Control;
+using RPG.Core;
 
 namespace RPG.SceneManagement
 {
@@ -89,6 +87,5 @@ namespace RPG.SceneManagement
             player.GetComponent<NavMeshAgent>().Warp(otherPortal.spawnPoint.position);
             player.transform.rotation = otherPortal.spawnPoint.rotation;
         }
-
     }
 }
