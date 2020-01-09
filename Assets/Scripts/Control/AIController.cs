@@ -153,6 +153,8 @@ namespace RPG.Control
         {
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(transform.position, chaseDistance);
+            Gizmos.color = Color.blue;
+            Gizmos.DrawWireSphere(transform.position, shoutDistance);
         }
     }
 }
