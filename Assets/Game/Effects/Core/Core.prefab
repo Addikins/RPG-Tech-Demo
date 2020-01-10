@@ -256,6 +256,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4543896211700920231}
     m_Modifications:
+    - target: {fileID: 6876260919355362430, guid: f24329b5c59a39f42ac3ac86ebf0d3d2,
+        type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 3017421893833615552, guid: f24329b5c59a39f42ac3ac86ebf0d3d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -311,11 +316,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6876260919355362430, guid: f24329b5c59a39f42ac3ac86ebf0d3d2,
-        type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f24329b5c59a39f42ac3ac86ebf0d3d2, type: 3}
 --- !u!4 &1652575589355559127 stripped
@@ -337,20 +337,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4543896211700920231}
     m_Modifications:
+    - target: {fileID: 808117111057217311, guid: 3691c19d9fb030448a5ee43a2ef513d7,
+        type: 3}
+      propertyPath: m_Name
+      value: Follow Camera
+      objectReference: {fileID: 0}
     - target: {fileID: 808117111057217309, guid: 3691c19d9fb030448a5ee43a2ef513d7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.772415
+      value: 9.883381
       objectReference: {fileID: 0}
     - target: {fileID: 808117111057217309, guid: 3691c19d9fb030448a5ee43a2ef513d7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.004603
+      value: 4.0046034
       objectReference: {fileID: 0}
     - target: {fileID: 808117111057217309, guid: 3691c19d9fb030448a5ee43a2ef513d7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.349584
+      value: -15.282154
       objectReference: {fileID: 0}
     - target: {fileID: 808117111057217309, guid: 3691c19d9fb030448a5ee43a2ef513d7,
         type: 3}
@@ -392,11 +397,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 808117111057217311, guid: 3691c19d9fb030448a5ee43a2ef513d7,
-        type: 3}
-      propertyPath: m_Name
-      value: Follow Camera
-      objectReference: {fileID: 0}
     - target: {fileID: 808117111057217308, guid: 3691c19d9fb030448a5ee43a2ef513d7,
         type: 3}
       propertyPath: m_LookAt
@@ -422,6 +422,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4543896211700920231}
     m_Modifications:
+    - target: {fileID: 9176745253776949134, guid: 9a82e505d17d5874ab0f090b1dcf8d86,
+        type: 3}
+      propertyPath: m_Name
+      value: HUD
+      objectReference: {fileID: 0}
     - target: {fileID: 8092737606078655914, guid: 9a82e505d17d5874ab0f090b1dcf8d86,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -526,11 +531,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9176745253776949134, guid: 9a82e505d17d5874ab0f090b1dcf8d86,
-        type: 3}
-      propertyPath: m_Name
-      value: HUD
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a82e505d17d5874ab0f090b1dcf8d86, type: 3}
