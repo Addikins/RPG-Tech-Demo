@@ -87,8 +87,9 @@ namespace RPG.Combat
 
         private void TriggerAttack()
         {
+            int randomAnimation = Random.Range(0, currentWeaponConfig.GetAnimationOverrides());
             GetComponent<Animator>().ResetTrigger("stopAttack");
-            GetComponent<Animator>().SetTrigger("attack");
+            GetComponent<Animator>().SetTrigger("attack" + randomAnimation);
         }
         private void StopAttack()
         {

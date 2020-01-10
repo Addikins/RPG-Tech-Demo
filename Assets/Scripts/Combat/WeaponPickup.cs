@@ -57,6 +57,8 @@ namespace RPG.Combat
         {
             if (Input.GetMouseButtonDown(0))
             {
+                callingController.SetMoveIndicator(transform.position);
+
                 if (IsInRange(callingController))
                 {
                     Pickup(callingController.gameObject);

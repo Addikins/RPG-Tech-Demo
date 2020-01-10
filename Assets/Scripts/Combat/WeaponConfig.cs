@@ -13,6 +13,7 @@ namespace RPG.Combat
         [SerializeField] float percentageBonus = 0f;
         [SerializeField] bool isRightHanded = true;
         [SerializeField] Projectile projectile = null;
+        [SerializeField] int animationOverrides = 1;
 
         const string weaponName = "Weapon";
 
@@ -95,6 +96,11 @@ namespace RPG.Combat
         public float GetWeaponDamage()
         {
             return weaponDamage;
+        }
+
+        public int GetAnimationOverrides()
+        {
+            return animationOverrides;
         }
     }
 }

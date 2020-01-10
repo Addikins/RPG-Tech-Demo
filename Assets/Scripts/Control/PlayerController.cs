@@ -97,15 +97,20 @@ namespace RPG.Control
                 if (Input.GetMouseButton(0))
                 {
                     GetComponent<Mover>().StartMoveAction(target, playerSpeed);
-                    if (Input.GetMouseButtonDown(0))
-                    {
-                        Instantiate(movementIndicator, (target + (Vector3.up / 10)), Quaternion.Euler(-90, 0, 0));
-                    }
+                    SetMoveIndicator(target);
                 }
                 SetCursor(CursorType.Movement);
                 return true;
             }
             return false;
+        }
+
+        public void SetMoveIndicator(Vector3 target)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                Instantiate(movementIndicator, (target + (Vector3.up/8)), Quaternion.Euler(-90, 0, 0));
+            }
         }
 
         private bool RaycastNavMesh(out Vector3 target)

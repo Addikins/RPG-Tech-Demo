@@ -17,6 +17,7 @@ namespace RPG.Combat
             if (Input.GetMouseButton(0))
             {
                 callingController.GetComponent<Fighter>().Attack(gameObject);
+                callingController.SetMoveIndicator(transform.position);
             }
             return true;
         }
