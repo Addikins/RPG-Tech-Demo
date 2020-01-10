@@ -13,6 +13,7 @@ namespace RPG.Attributes
         [SerializeField] float regenerationPercentage = 70f;
         [SerializeField] TakeDamageEvent takeDamage;
         [SerializeField] UnityEvent onDie;
+        [SerializeField] int deathAnimations = 2;
 
         [System.Serializable]
         public class TakeDamageEvent : UnityEvent<float>
@@ -106,7 +107,8 @@ namespace RPG.Attributes
             if (isDead) { return; }
 
             isDead = true;
-            GetComponent<Animator>().SetTrigger("die");
+            int randomAnimation = UnityEngine.Random.Range(0, deathAnimations);
+            GetComponent<Animator>().SetTrigger("die" + randomAnimation);
             GetComponent<ActionScheduler>().CancelCurrentAction();
             GetComponent<CapsuleCollider>().enabled = false;
         }
