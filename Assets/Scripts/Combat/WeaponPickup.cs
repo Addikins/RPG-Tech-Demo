@@ -12,6 +12,7 @@ namespace RPG.Combat
         [SerializeField] float healthToRestore = 0;
         [SerializeField] float respawnTime = 5f;
         [SerializeField] float pickupRange = 2f;
+        [SerializeField] bool destroyOnPickup = false;
 
         private void OnTriggerEnter(Collider other)
         {
@@ -30,6 +31,11 @@ namespace RPG.Combat
             if (healthToRestore > 0)
             {
                 subject.GetComponent<Health>().Heal(healthToRestore);
+            }
+            if (destroyOnPickup)
+            {
+                Destroy(this);
+                return;
             }
             StartCoroutine(HideForSeconds(respawnTime));
         }

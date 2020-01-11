@@ -6,16 +6,26 @@ namespace RPG.Audio
 {
     public class MusicPlayer : MonoBehaviour
     {
-        [SerializeField] float volume = .5f;
-        [SerializeField] AudioClip audioClip = null;
+        [SerializeField] AudioClip[] audioClips = null;
+
+        AudioSource audioSource;
 
         private void Awake()
         {
-            
+            audioSource = GetComponent<AudioSource>();
         }
-        private void Start()
+        public void PlaySong(int songToPlay, float volume)
         {
-            AudioSource.PlayClipAtPoint(audioClip, transform.position, volume);
+            if (audioSource.isPlaying) { return; }
+            audioSource.PlayOneShot(audioClips[songToPlay], volume);
+        }
+        public void StopSong()
+        {
+            audioSource.Stop();
+        }
+        public bool SongIsPlaying()
+        {
+            return audioSource.isPlaying;
         }
     }
 }

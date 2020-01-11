@@ -8,6 +8,8 @@ TagManager:
   - Pickup Effect
   - Pickup
   - Follow Camera
+  - Collide
+  - Music Player
   layers:
   - Default
   - TransparentFX
