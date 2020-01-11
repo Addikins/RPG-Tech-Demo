@@ -34,7 +34,7 @@ namespace RPG.Combat
             }
             if (destroyOnPickup)
             {
-                Destroy(this);
+                Destroy(gameObject);
                 return;
             }
             StartCoroutine(HideForSeconds(respawnTime));
