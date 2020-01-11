@@ -77,6 +77,11 @@ PrefabInstance:
       propertyPath: rightHandTransform
       value: 
       objectReference: {fileID: 3780028582534496729}
+    - target: {fileID: 7831684156600137707, guid: 7f8511a5f30deeb4f8aa3471077bce11,
+        type: 3}
+      propertyPath: shaderSource
+      value: 
+      objectReference: {fileID: 3780028582534823921}
     - target: {fileID: 8696506102030671912, guid: 7f8511a5f30deeb4f8aa3471077bce11,
         type: 3}
       propertyPath: shoutDistance
@@ -151,6 +156,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 78be5954566d2d848918e51832341fa3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 679ff741e12a7e740819ede24a7000b7, type: 3}
+--- !u!1 &3780028582534823921 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 161708, guid: 679ff741e12a7e740819ede24a7000b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 3780028582534695005}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3780028582534570417 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 403948, guid: 679ff741e12a7e740819ede24a7000b7,

@@ -178,11 +178,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 285d8d446c706894999a9a6293d5bd57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0.75
+  timeBetweenAttacks: 0.5
   chaseSpeedMultiplier: 1
   rightHandTransform: {fileID: 0}
   leftHandTransform: {fileID: 0}
   defaultWeapon: {fileID: 0}
+  shaderSource: {fileID: 0}
+  targetOutlineColor: {r: 1, g: 0, b: 0, a: 1}
+  defaultOutlineColor: {r: 0, g: 0, b: 0, a: 1}
+  randomAnimation: 0
 --- !u!114 &1795739094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,6 +255,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  deathAnimations: 2
 --- !u!114 &4145543459893269406
 MonoBehaviour:
   m_ObjectHideFlags: 0

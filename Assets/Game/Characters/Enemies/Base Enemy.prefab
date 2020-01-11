@@ -298,6 +298,11 @@ PrefabInstance:
       propertyPath: chaseSpeedMultiplier
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 4295428977625122563, guid: 7ffdd5ee6913cd549be87999555c6de0,
+        type: 3}
+      propertyPath: targetOutlineColor.a
+      value: 0.3764706
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ffdd5ee6913cd549be87999555c6de0, type: 3}
 --- !u!1 &3216467405516748064 stripped

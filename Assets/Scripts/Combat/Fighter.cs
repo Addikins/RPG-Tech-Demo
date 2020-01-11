@@ -16,6 +16,9 @@ namespace RPG.Combat
         [SerializeField] Transform rightHandTransform = null;
         [SerializeField] Transform leftHandTransform = null;
         [SerializeField] WeaponConfig defaultWeapon = null;
+        [SerializeField] GameObject shaderSource = null;
+        [SerializeField] Color targetOutlineColor = Color.red;
+        [SerializeField] Color defaultOutlineColor = Color.black;
 
         Health target;
         float timeSinceLastAttack = Mathf.Infinity;
@@ -39,7 +42,11 @@ namespace RPG.Combat
             timeSinceLastAttack += Time.deltaTime;
 
             if (target == null) return;
-            if (target.IsDead()) return;
+            if (target.IsDead())
+            {
+                ResetAnimationTriggers();
+                return;
+            }
 
             if (!GetIsInRange(target.transform))
             {
@@ -91,9 +98,18 @@ namespace RPG.Combat
             GetComponent<Animator>().ResetTrigger("stopAttack");
             GetComponent<Animator>().SetTrigger("attack" + randomAnimation);
         }
+
+        private void ResetAnimationTriggers()
+        {
+            for (int i = 0; i < currentWeaponConfig.GetAnimationOverrides(); i++)
+            {
+                GetComponent<Animator>().ResetTrigger("attack" + i);
+            }
+        }
+
         private void StopAttack()
         {
-            GetComponent<Animator>().ResetTrigger("attack");
+            ResetAnimationTriggers();
             GetComponent<Animator>().SetTrigger("stopAttack");
         }
 
@@ -162,12 +178,40 @@ namespace RPG.Combat
         {
             GetComponent<ActionScheduler>().StartAction(this);
             target = combatTarget.GetComponent<Health>();
+
+            SetTargetOutlineColor(target);
         }
+
+        private void SetTargetOutlineColor(Health lastKnownTarget)
+        {
+            if (gameObject.tag != "Player") { return; }
+
+            if (target == null)
+            {
+                // Get target's shader component
+                GameObject targetShaderSource = lastKnownTarget.GetComponent<Fighter>().shaderSource;
+                // Change target's outline color
+                targetShaderSource.GetComponent<Renderer>().material.SetColor("_OutlineColor", defaultOutlineColor);
+            }
+            else
+            {
+                GameObject targetShaderSource = target.GetComponent<Fighter>().shaderSource;
+                targetShaderSource.GetComponent<Renderer>().material.SetColor("_OutlineColor", targetOutlineColor);
+            }
+
+        }
+
 
         public void Cancel()
         {
             StopAttack();
+
+            // Assign target to lastTarget to avoid null reference exception
+            Health lastTarget = target;
             target = null;
+
+            SetTargetOutlineColor(lastTarget);
+
             GetComponent<Mover>().Cancel();
         }
 

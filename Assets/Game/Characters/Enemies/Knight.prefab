@@ -61,6 +61,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 874a5ed99376cc74e864a17221768bdc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 679ff741e12a7e740819ede24a7000b7, type: 3}
+--- !u!1 &2535745820038444828 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 161708, guid: 679ff741e12a7e740819ede24a7000b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 2535745820038316208}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2535745820038719836 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 403948, guid: 679ff741e12a7e740819ede24a7000b7,
@@ -155,6 +161,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.15
       objectReference: {fileID: 0}
+    - target: {fileID: 4388286880226677736, guid: 7f8511a5f30deeb4f8aa3471077bce11,
+        type: 3}
+      propertyPath: characterClass
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7831684156600137707, guid: 7f8511a5f30deeb4f8aa3471077bce11,
         type: 3}
       propertyPath: defaultWeapon
@@ -181,16 +192,11 @@ PrefabInstance:
       propertyPath: rightHandTransform
       value: 
       objectReference: {fileID: 2535745820038777140}
-    - target: {fileID: 6524084792246100013, guid: 7f8511a5f30deeb4f8aa3471077bce11,
+    - target: {fileID: 7831684156600137707, guid: 7f8511a5f30deeb4f8aa3471077bce11,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: shaderSource
       value: 
-      objectReference: {fileID: 2100000, guid: 3f6fc0cf5e5d31c458bc74ede87cb8ae, type: 2}
-    - target: {fileID: 4388286880226677736, guid: 7f8511a5f30deeb4f8aa3471077bce11,
-        type: 3}
-      propertyPath: characterClass
-      value: 5
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2535745820038444828}
     - target: {fileID: 8696506102030671912, guid: 7f8511a5f30deeb4f8aa3471077bce11,
         type: 3}
       propertyPath: chaseDistance
@@ -221,6 +227,11 @@ PrefabInstance:
       propertyPath: shoutDistance
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 6524084792246100013, guid: 7f8511a5f30deeb4f8aa3471077bce11,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3f6fc0cf5e5d31c458bc74ede87cb8ae, type: 2}
     - target: {fileID: 7448237997676889915, guid: 7f8511a5f30deeb4f8aa3471077bce11,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
