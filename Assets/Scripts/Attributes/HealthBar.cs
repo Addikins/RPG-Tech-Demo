@@ -8,12 +8,13 @@ namespace RPG.Attributes
         [SerializeField] RectTransform foreground = null;
         [SerializeField] Canvas rootCanvas = null;
         [SerializeField] float disableDelayTime = 3f;
+        [SerializeField] bool isPlayerHealthBar = false;
 
         float timeDead = 0;
 
         private void Update()
         {
-            if (Mathf.Approximately(healthComponenet.GetHealthFraction(), 1))
+            if (Mathf.Approximately(healthComponenet.GetHealthFraction(), 1) && !isPlayerHealthBar)
             {
                 rootCanvas.enabled = false;
                 return;

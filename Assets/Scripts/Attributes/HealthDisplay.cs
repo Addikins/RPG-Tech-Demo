@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,15 +8,17 @@ namespace RPG.Attributes
     public class HealthDisplay : MonoBehaviour
     {
         Health health;
+        TextMeshProUGUI textMeshPro;
 
         private void Awake()
         {
+            textMeshPro = GetComponent<TextMeshProUGUI>();
             health = GameObject.FindWithTag("Player").GetComponent<Health>();
         }
 
         private void Update()
         {
-            GetComponent<Text>().text = String.Format("{0} / {1}", health.GetHealthPoints(), health.GetMaxHealth());
+            textMeshPro.text = String.Format("{0} / {1}", Mathf.Round(health.GetHealthPoints()), health.GetMaxHealth());
         }
     }
 }
