@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.AI;
 using RPG.Control;
-using RPG.Core;
 
 namespace RPG.SceneManagement
 {
@@ -17,9 +16,10 @@ namespace RPG.SceneManagement
         [SerializeField] float fadeOutTime = 0.5f;
         [SerializeField] float fadeInTime = 1f;
         [SerializeField] float fadeWaitTime = 0.5f;
-        [SerializeField] int sceneToLoad = -1;
         [SerializeField] Transform spawnPoint;
         [SerializeField] DestinationIdentifier destination;
+        [SerializeField] int sceneToLoad = -1;
+
 
         private void OnTriggerEnter(Collider other)
         {
@@ -29,7 +29,7 @@ namespace RPG.SceneManagement
             }
         }
 
-        private IEnumerator Transition()
+        public IEnumerator Transition()
         {
             if (sceneToLoad < 0)
             {

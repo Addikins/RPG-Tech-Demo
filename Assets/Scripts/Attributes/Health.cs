@@ -2,9 +2,11 @@ using UnityEngine;
 using RPG.Saving;
 using RPG.Stats;
 using RPG.Core;
+using RPG.SceneManagement;
 using GameDevTV.Utils;
 using UnityEngine.Events;
-using System;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 namespace RPG.Attributes
 {
@@ -14,6 +16,7 @@ namespace RPG.Attributes
         [SerializeField] TakeDamageEvent takeDamage;
         [SerializeField] UnityEvent onDie;
         [SerializeField] int deathAnimations = 2;
+        [SerializeField] float onDeathLoadDelay = 3f;
 
         [System.Serializable]
         public class TakeDamageEvent : UnityEvent<float>
@@ -111,6 +114,13 @@ namespace RPG.Attributes
             GetComponent<Animator>().SetTrigger("die" + randomAnimation);
             GetComponent<ActionScheduler>().CancelCurrentAction();
             GetComponent<CapsuleCollider>().enabled = false;
+
+            if (tag == "Player")
+            {
+                SavingWrapper savingWrapper = FindObjectOfType<SavingWrapper>();
+                // StartCoroutine(savingWrapper.LoadLastScene());
+                StartCoroutine(ReloadSave());
+            }
         }
 
         private void RegenerateHealth()
@@ -128,6 +138,14 @@ namespace RPG.Attributes
             experience.GainExperience(GetComponent<BaseStats>().GetStat(Stat.ExperienceReward));
         }
 
+        public IEnumerator ReloadSave()
+        {
+            yield return new WaitForSeconds(onDeathLoadDelay);
+            SavingWrapper savingWrapper = FindObjectOfType<SavingWrapper>();
+            savingWrapper.Load();
+            StartCoroutine(savingWrapper.FadeInOnLoad());
+        }
+
         public object CaptureState()
         {
             return healthPoints.value;
@@ -141,6 +159,22 @@ namespace RPG.Attributes
             {
                 TriggerDeath();
             }
+            else if (isDead == true)
+            {
+                ResetDeathTriggers();
+
+                isDead = false;
+            }
+        }
+
+        private void ResetDeathTriggers()
+        {
+            for (int i = 0; i < deathAnimations; i++)
+            {
+                GetComponent<Animator>().ResetTrigger("die" + i);
+            }
+            GetComponent<Animator>().ResetTrigger("stopAttack");
+            GetComponent<Animator>().SetTrigger("reload");
         }
     }
 

@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using RPG.Saving;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace RPG.SceneManagement
 {
@@ -14,9 +16,14 @@ namespace RPG.SceneManagement
             StartCoroutine(LoadLastScene());
         }
 
-        private IEnumerator LoadLastScene()
+        public IEnumerator LoadLastScene()
         {
             yield return GetComponent<SavingSystem>().LoadLastScene(defaultSaveFile);
+            StartCoroutine(FadeInOnLoad());
+        }
+
+        public IEnumerator FadeInOnLoad()
+        {
             Fader fader = FindObjectOfType<Fader>();
             fader.FadeOutImmediate();
             yield return fader.FadeIn(fadeInTime);

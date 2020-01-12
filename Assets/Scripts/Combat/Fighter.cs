@@ -21,6 +21,7 @@ namespace RPG.Combat
         [SerializeField] Color defaultOutlineColor = Color.black;
 
         Health target;
+        Health lastKnownTarget;
         float timeSinceLastAttack = Mathf.Infinity;
 
         WeaponConfig currentWeaponConfig;
@@ -176,27 +177,49 @@ namespace RPG.Combat
 
         public void Attack(GameObject combatTarget)
         {
-            GetComponent<ActionScheduler>().StartAction(this);
-            target = combatTarget.GetComponent<Health>();
+            Health currentTarget = combatTarget.GetComponent<Health>();
+            CancelPreviousAttack(currentTarget);
 
-            SetTargetOutlineColor(target);
+            GetComponent<ActionScheduler>().StartAction(this);
+            target = currentTarget;
+
+            SetTargetOutlineColor();
         }
 
-        private void SetTargetOutlineColor(Health lastKnownTarget)
+        private void CancelPreviousAttack(Health currentTarget)
+        {
+            // Save target property in lastKnownTarget before reassigning target to the new target value
+            if (target != currentTarget)
+            {
+                lastKnownTarget = target;
+                target = null;
+                SetTargetOutlineColor();
+            }
+        }
+
+        private void SetTargetOutlineColor()
         {
             if (gameObject.tag != "Player") { return; }
 
+            // Failsafe, may or may not be necessary
+            if (target == null && lastKnownTarget == null) { return; }
+
+            // If target is null then player is either moving or targeting a new enemy
+            // So we take the last known target and reset their target outline
             if (target == null)
             {
                 // Get target's shader component
                 GameObject targetShaderSource = lastKnownTarget.GetComponent<Fighter>().shaderSource;
                 // Change target's outline color
                 targetShaderSource.GetComponent<Renderer>().material.SetColor("_OutlineColor", defaultOutlineColor);
+                print("Last target: " + lastKnownTarget.name);
             }
+            // Sets the target's outline to the color set in the editor
             else
             {
                 GameObject targetShaderSource = target.GetComponent<Fighter>().shaderSource;
                 targetShaderSource.GetComponent<Renderer>().material.SetColor("_OutlineColor", targetOutlineColor);
+                print("Target: " + target.name);
             }
 
         }
@@ -205,12 +228,12 @@ namespace RPG.Combat
         public void Cancel()
         {
             StopAttack();
+            lastKnownTarget = target;
 
             // Assign target to lastTarget to avoid null reference exception
-            Health lastTarget = target;
             target = null;
 
-            SetTargetOutlineColor(lastTarget);
+            SetTargetOutlineColor();
 
             GetComponent<Mover>().Cancel();
         }
