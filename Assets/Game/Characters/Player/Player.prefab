@@ -372,6 +372,12 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 9572094, guid: 30cf93deff988e74e88a144bd2127c18, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 30cf93deff988e74e88a144bd2127c18, type: 3}
+--- !u!1 &2262078612994141716 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 153244, guid: 30cf93deff988e74e88a144bd2127c18,
+    type: 3}
+  m_PrefabInstance: {fileID: 2262078612994029704}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2262078612993945476 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 481036, guid: 30cf93deff988e74e88a144bd2127c18,
@@ -405,6 +411,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7770263450027844352, guid: 7ffdd5ee6913cd549be87999555c6de0,
+        type: 3}
+      propertyPath: characterClass
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7770263450027844352, guid: 7ffdd5ee6913cd549be87999555c6de0,
+        type: 3}
+      propertyPath: levelUpEffect
+      value: 
+      objectReference: {fileID: 7257222898820146034, guid: 3ffab8e9721893a4199ff4d73712c1f4,
+        type: 3}
+    - target: {fileID: 7770263450027844352, guid: 7ffdd5ee6913cd549be87999555c6de0,
+        type: 3}
+      propertyPath: shouldUseModifiers
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7770263450027844352, guid: 7ffdd5ee6913cd549be87999555c6de0,
+        type: 3}
+      propertyPath: levelUpEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayRandomClip
+      objectReference: {fileID: 0}
+    - target: {fileID: 7770263450027844352, guid: 7ffdd5ee6913cd549be87999555c6de0,
+        type: 3}
+      propertyPath: levelUpEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5109313981124503424}
+    - target: {fileID: 1501157206804586884, guid: 7ffdd5ee6913cd549be87999555c6de0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1897376398, guid: 7ffdd5ee6913cd549be87999555c6de0, type: 3}
+      propertyPath: maxNavPathLength
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 945066719576482166, guid: 7ffdd5ee6913cd549be87999555c6de0,
         type: 3}
@@ -461,45 +502,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1501157206804586884, guid: 7ffdd5ee6913cd549be87999555c6de0,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3514938662456729219, guid: 7ffdd5ee6913cd549be87999555c6de0,
         type: 3}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7770263450027844352, guid: 7ffdd5ee6913cd549be87999555c6de0,
-        type: 3}
-      propertyPath: characterClass
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7770263450027844352, guid: 7ffdd5ee6913cd549be87999555c6de0,
-        type: 3}
-      propertyPath: levelUpEffect
-      value: 
-      objectReference: {fileID: 7257222898820146034, guid: 3ffab8e9721893a4199ff4d73712c1f4,
-        type: 3}
-    - target: {fileID: 7770263450027844352, guid: 7ffdd5ee6913cd549be87999555c6de0,
-        type: 3}
-      propertyPath: shouldUseModifiers
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7770263450027844352, guid: 7ffdd5ee6913cd549be87999555c6de0,
-        type: 3}
-      propertyPath: levelUpEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PlayRandomClip
-      objectReference: {fileID: 0}
-    - target: {fileID: 7770263450027844352, guid: 7ffdd5ee6913cd549be87999555c6de0,
-        type: 3}
-      propertyPath: levelUpEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 5109313981124503424}
-    - target: {fileID: 1897376398, guid: 7ffdd5ee6913cd549be87999555c6de0, type: 3}
-      propertyPath: maxNavPathLength
-      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4295428977625122563, guid: 7ffdd5ee6913cd549be87999555c6de0,
         type: 3}
@@ -517,6 +523,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: de148dafd10995349ac7e09c1fbf606d,
         type: 2}
+    - target: {fileID: 4295428977625122563, guid: 7ffdd5ee6913cd549be87999555c6de0,
+        type: 3}
+      propertyPath: shaderSource
+      value: 
+      objectReference: {fileID: 2262078612994141716}
     - target: {fileID: 4145543459893269406, guid: 7ffdd5ee6913cd549be87999555c6de0,
         type: 3}
       propertyPath: uniqueIdentifier

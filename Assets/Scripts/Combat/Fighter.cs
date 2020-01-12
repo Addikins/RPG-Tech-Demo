@@ -19,6 +19,8 @@ namespace RPG.Combat
         [SerializeField] GameObject shaderSource = null;
         [SerializeField] Color targetOutlineColor = Color.red;
         [SerializeField] Color defaultOutlineColor = Color.black;
+        [Range(0, 1)]
+        [SerializeField] float outlineThickness = .02f;
 
         Health target;
         Health lastKnownTarget;
@@ -35,6 +37,7 @@ namespace RPG.Combat
 
         private void Start()
         {
+            shaderSource.GetComponent<Renderer>().material.SetFloat("_Outline", outlineThickness);
             currentWeapon.ForceInit();
         }
 
@@ -212,14 +215,12 @@ namespace RPG.Combat
                 GameObject targetShaderSource = lastKnownTarget.GetComponent<Fighter>().shaderSource;
                 // Change target's outline color
                 targetShaderSource.GetComponent<Renderer>().material.SetColor("_OutlineColor", defaultOutlineColor);
-                print("Last target: " + lastKnownTarget.name);
             }
             // Sets the target's outline to the color set in the editor
             else
             {
                 GameObject targetShaderSource = target.GetComponent<Fighter>().shaderSource;
                 targetShaderSource.GetComponent<Renderer>().material.SetColor("_OutlineColor", targetOutlineColor);
-                print("Target: " + target.name);
             }
 
         }
