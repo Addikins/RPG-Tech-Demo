@@ -7595,7 +7595,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1168662717}
-  m_LocalRotation: {x: 0.13079548, y: -0.53617245, z: 0.08453158, w: 0.82961804}
+  m_LocalRotation: {x: 0.1307955, y: -0.5361725, z: 0.0845316, w: 0.82961804}
   m_LocalPosition: {x: -8.92, y: 12.81, z: 36.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -11797,6 +11797,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 8031066053272668101, guid: 6da9e9bb890775449b3df6194873893b,
+        type: 3}
+      propertyPath: songToPlay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8031066053272668101, guid: 6da9e9bb890775449b3df6194873893b,
+        type: 3}
+      propertyPath: playFromLastScene
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197812291469402352, guid: 6da9e9bb890775449b3df6194873893b,
+        type: 3}
+      propertyPath: experiencePoints
+      value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 4678166167253585754, guid: 6da9e9bb890775449b3df6194873893b,
         type: 3}

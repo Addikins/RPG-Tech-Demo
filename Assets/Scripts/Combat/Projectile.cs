@@ -59,24 +59,24 @@ namespace RPG.Combat
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.tag == "Player" && passThroughPlayer) { return; }
-
-            if (other.GetComponent<Collider>() != target.GetComponent<Collider>() || other.GetComponent<TerrainCollider>())
+            if (other.tag != "Player" && other.tag != "Enemy")
             {
                 DestroyProjectile();
+                return;
             }
-
+            if (other.tag == "Player" && passThroughPlayer) { return; }
             if (other.tag == "Enemy" && passThroughEnemy) { return; }
 
-
+            if (other != target.GetComponent<Collider>() || other.GetComponent<TerrainCollider>())
+            {
+                DestroyProjectile();
+                return;
+            }
 
             if (target.IsDead()) { return; }
 
             onProjectileLand.Invoke();
             target.TakeDamage(instigator, damage);
-
-            speed = 0;
-
             if (hitEffect != null)
             {
                 Instantiate(hitEffect, GetAimLocation(), transform.rotation);
@@ -89,9 +89,9 @@ namespace RPG.Combat
         {
             foreach (GameObject toDestroy in destroyOnImpact)
             {
+                speed = 0;
                 Destroy(toDestroy);
             }
-
             Destroy(gameObject, lifeAfterImpact);
         }
     }
