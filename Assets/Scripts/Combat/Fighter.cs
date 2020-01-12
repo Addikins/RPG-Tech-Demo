@@ -80,6 +80,11 @@ namespace RPG.Combat
             return weapon.Spawn(rightHandTransform, leftHandTransform, animator);
         }
 
+        public WeaponConfig GetWeapon()
+        {
+            return currentWeaponConfig;
+        }
+
         public Health GetTarget()
         {
             return target;

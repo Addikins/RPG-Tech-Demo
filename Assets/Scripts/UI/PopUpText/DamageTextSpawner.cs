@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 
-namespace RPG.UI.DamageText
+namespace RPG.UI.PopUpText
 {
     public class DamageTextSpawner : MonoBehaviour
     {
-        [SerializeField] DamageText damageTextPrefab = null;
+        [SerializeField] PopText popTextPrefab = null;
 
         public void Spawn(float damageAmount)
         {
-            DamageText instance = Instantiate<DamageText>(damageTextPrefab, transform);
+            PopText instance = Instantiate<PopText>(damageTextPrefab, transform);
             instance.SetValue(damageAmount);
         }
     }

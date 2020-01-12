@@ -14,14 +14,20 @@ namespace RPG.Attributes
     {
         [SerializeField] float regenerationPercentage = 70f;
         [SerializeField] TakeDamageEvent takeDamage;
+        [SerializeField] GainHealthEvent gainHealth;
+        [SerializeField] GainExperienceEvent gainEXP;
         [SerializeField] UnityEvent onDie;
         [SerializeField] int deathAnimations = 2;
         [SerializeField] float onDeathLoadDelay = 3f;
 
         [System.Serializable]
-        public class TakeDamageEvent : UnityEvent<float>
-        {
-        }
+        public class TakeDamageEvent : UnityEvent<float> { }
+
+        [System.Serializable]
+        public class GainHealthEvent : UnityEvent<float> { }
+
+        [System.Serializable]
+        public class GainExperienceEvent : UnityEvent<float> { }
 
         LazyValue<float> healthPoints;
 

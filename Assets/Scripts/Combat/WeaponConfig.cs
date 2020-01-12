@@ -102,5 +102,10 @@ namespace RPG.Combat
         {
             return animationOverrides;
         }
+
+        public Weapon GetCurrentWeapon()
+        {
+            return equippedPrefab;
+        }
     }
 }
