@@ -122,8 +122,6 @@ GameObject:
   m_Component:
   - component: {fileID: 859355409642723835}
   - component: {fileID: 1341279557961676348}
-  - component: {fileID: 6537330454377575182}
-  - component: {fileID: 5175498344164766465}
   m_Layer: 0
   m_Name: Portal Entrance
   m_TagString: Untagged
@@ -158,35 +156,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6961f89d81558b04ca603ddff2c12595, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &6537330454377575182
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7719651722220436547}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &5175498344164766465
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7719651722220436547}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1001 &557297991513992061
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -246,11 +215,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: 9f751ae11b8509743a93608a9471fa73, type: 3}
+    - target: {fileID: 100004, guid: 9f751ae11b8509743a93608a9471fa73, type: 3}
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 100004, guid: 9f751ae11b8509743a93608a9471fa73, type: 3}
+    - target: {fileID: 100002, guid: 9f751ae11b8509743a93608a9471fa73, type: 3}
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
