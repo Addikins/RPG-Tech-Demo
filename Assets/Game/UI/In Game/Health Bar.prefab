@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 3682221078680720621}
   m_Layer: 0
   m_Name: Health Bar
-  m_TagString: Untagged
+  m_TagString: Ignore UI Cursor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -235,6 +235,7 @@ MonoBehaviour:
   foreground: {fileID: 4293914019159262618}
   rootCanvas: {fileID: 3619196202036491776}
   disableDelayTime: 3
+  isPlayerHealthBar: 0
 --- !u!1 &8991036135077346487
 GameObject:
   m_ObjectHideFlags: 0

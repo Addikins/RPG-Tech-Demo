@@ -1,6 +1,5 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
 namespace RPG.UI.PopUpText
@@ -8,10 +7,14 @@ namespace RPG.UI.PopUpText
     public class PopText : MonoBehaviour
     {
         [SerializeField] TextMeshProUGUI textValue = null;
+        [SerializeField] bool isPositive = true;
+
+        string modifier = "+";
 
         public void SetValue(float amount)
         {
-            textValue.text = String.Format("{0}", amount);
+            if (!isPositive) { modifier = ""; }
+            textValue.text = String.Format("{0}{1}", modifier, amount);
         }
     }
 }

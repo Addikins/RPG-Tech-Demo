@@ -51,6 +51,7 @@ namespace RPG.Attributes
         public void Heal(float healthToRestore)
         {
             healthPoints.value = Mathf.Min((healthPoints.value + healthToRestore), GetInitialHealth());
+            gainHealth.Invoke(healthToRestore);
         }
 
         private void OnEnable()
@@ -141,7 +142,10 @@ namespace RPG.Attributes
             if (experience == null) { return; }
             if (instigator.GetComponent<Health>().IsDead()) { return; }
 
-            experience.GainExperience(GetComponent<BaseStats>().GetStat(Stat.ExperienceReward));
+            float xpToGain = GetComponent<BaseStats>().GetStat(Stat.ExperienceReward);
+
+            experience.GainExperience(xpToGain);
+            gainEXP.Invoke(Mathf.Round(xpToGain));
         }
 
         public IEnumerator ReloadSave()

@@ -109,7 +109,7 @@ namespace RPG.Control
         {
             if (Input.GetMouseButtonDown(0))
             {
-                Instantiate(movementIndicator, (target + (Vector3.up/8)), Quaternion.Euler(-90, 0, 0));
+                Instantiate(movementIndicator, (target + (Vector3.up / 8)), Quaternion.Euler(-90, 0, 0));
             }
         }
 
