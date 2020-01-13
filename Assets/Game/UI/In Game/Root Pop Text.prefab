@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 4131480873489549129}
   m_Layer: 0
   m_Name: Pop Text Canvas
-  m_TagString: Untagged
+  m_TagString: Ignore UI Cursor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,7 +142,7 @@ CanvasGroup:
   m_Enabled: 1
   m_Alpha: 1
   m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &4131480873489549129
 MonoBehaviour:
@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 3483141093297569817}
   m_Layer: 0
   m_Name: Pop Text - Text
-  m_TagString: Untagged
+  m_TagString: Ignore UI Cursor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -377,7 +377,7 @@ GameObject:
   - component: {fileID: 6649354039759702595}
   m_Layer: 0
   m_Name: Text
-  m_TagString: Untagged
+  m_TagString: Ignore UI Cursor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

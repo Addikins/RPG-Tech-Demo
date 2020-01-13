@@ -8,5 +8,8 @@ namespace RPG.Control
         UI,
         WeaponPickup,
         Dead,
+        HealthPot,
+        Ranged,
+        Portal,
     }
 }

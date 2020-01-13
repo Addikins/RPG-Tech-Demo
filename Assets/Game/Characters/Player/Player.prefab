@@ -62,7 +62,7 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: 21628736160fcc9488493401da3ef621, type: 3}
     hotspot: {x: 0, y: 0}
   - type: 1
-    texture: {fileID: 2800000, guid: 2e71a8202d3b4a3448ec85ced5a40265, type: 3}
+    texture: {fileID: 2800000, guid: 44a99ee545fd8ba46a452b12c1f9378b, type: 3}
     hotspot: {x: 0, y: 0}
   - type: 2
     texture: {fileID: 2800000, guid: 2d18e23e3ce249b4489b8bcdd02d3f48, type: 3}
@@ -76,6 +76,16 @@ MonoBehaviour:
   - type: 5
     texture: {fileID: 2800000, guid: 21628736160fcc9488493401da3ef621, type: 3}
     hotspot: {x: 0, y: 0}
+  - type: 6
+    texture: {fileID: 2800000, guid: e9cbbd7f4b159c44ba7918ed31612df2, type: 3}
+    hotspot: {x: 0, y: 0}
+  - type: 7
+    texture: {fileID: 2800000, guid: d65d95ca16518034fa82669a92d0b6e7, type: 3}
+    hotspot: {x: 0, y: 0}
+  - type: 8
+    texture: {fileID: 2800000, guid: 7d4a349e204be984cbd483b7ba288543, type: 3}
+    hotspot: {x: 0, y: 0}
+  weaponCursorRange: 5
   maxNavMeshProjectionDistance: 6
   raycastRadius: 0.5
 --- !u!1001 &2262078612994029704
@@ -412,41 +422,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 7770263450027844352, guid: 7ffdd5ee6913cd549be87999555c6de0,
-        type: 3}
-      propertyPath: characterClass
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7770263450027844352, guid: 7ffdd5ee6913cd549be87999555c6de0,
-        type: 3}
-      propertyPath: levelUpEffect
-      value: 
-      objectReference: {fileID: 7257222898820146034, guid: 3ffab8e9721893a4199ff4d73712c1f4,
-        type: 3}
-    - target: {fileID: 7770263450027844352, guid: 7ffdd5ee6913cd549be87999555c6de0,
-        type: 3}
-      propertyPath: shouldUseModifiers
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7770263450027844352, guid: 7ffdd5ee6913cd549be87999555c6de0,
-        type: 3}
-      propertyPath: levelUpEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PlayRandomClip
-      objectReference: {fileID: 0}
-    - target: {fileID: 7770263450027844352, guid: 7ffdd5ee6913cd549be87999555c6de0,
-        type: 3}
-      propertyPath: levelUpEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 5109313981124503424}
-    - target: {fileID: 1501157206804586884, guid: 7ffdd5ee6913cd549be87999555c6de0,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1897376398, guid: 7ffdd5ee6913cd549be87999555c6de0, type: 3}
-      propertyPath: maxNavPathLength
-      value: 60
-      objectReference: {fileID: 0}
     - target: {fileID: 945066719576482166, guid: 7ffdd5ee6913cd549be87999555c6de0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -502,10 +477,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3514938662456729219, guid: 7ffdd5ee6913cd549be87999555c6de0,
+    - target: {fileID: 1501157206804586884, guid: 7ffdd5ee6913cd549be87999555c6de0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872192445323792155, guid: 7ffdd5ee6913cd549be87999555c6de0,
         type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1891444564199378139, guid: 7ffdd5ee6913cd549be87999555c6de0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6508555093338229009, guid: 7ffdd5ee6913cd549be87999555c6de0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4145543459893269406, guid: 7ffdd5ee6913cd549be87999555c6de0,
+        type: 3}
+      propertyPath: uniqueIdentifier
+      value: player
       objectReference: {fileID: 0}
     - target: {fileID: 4295428977625122563, guid: 7ffdd5ee6913cd549be87999555c6de0,
         type: 3}
@@ -528,15 +523,45 @@ PrefabInstance:
       propertyPath: shaderSource
       value: 
       objectReference: {fileID: 2262078612994141716}
-    - target: {fileID: 4145543459893269406, guid: 7ffdd5ee6913cd549be87999555c6de0,
-        type: 3}
-      propertyPath: uniqueIdentifier
-      value: player
+    - target: {fileID: 1897376398, guid: 7ffdd5ee6913cd549be87999555c6de0, type: 3}
+      propertyPath: maxNavPathLength
+      value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 7770263450027844352, guid: 7ffdd5ee6913cd549be87999555c6de0,
+        type: 3}
+      propertyPath: characterClass
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7770263450027844352, guid: 7ffdd5ee6913cd549be87999555c6de0,
+        type: 3}
+      propertyPath: levelUpEffect
+      value: 
+      objectReference: {fileID: 7257222898820146034, guid: 3ffab8e9721893a4199ff4d73712c1f4,
+        type: 3}
+    - target: {fileID: 7770263450027844352, guid: 7ffdd5ee6913cd549be87999555c6de0,
+        type: 3}
+      propertyPath: shouldUseModifiers
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7770263450027844352, guid: 7ffdd5ee6913cd549be87999555c6de0,
+        type: 3}
+      propertyPath: levelUpEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayRandomClip
+      objectReference: {fileID: 0}
+    - target: {fileID: 7770263450027844352, guid: 7ffdd5ee6913cd549be87999555c6de0,
+        type: 3}
+      propertyPath: levelUpEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5109313981124503424}
     - target: {fileID: 2951264740058581340, guid: 7ffdd5ee6913cd549be87999555c6de0,
         type: 3}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3514938662456729219, guid: 7ffdd5ee6913cd549be87999555c6de0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ffdd5ee6913cd549be87999555c6de0, type: 3}

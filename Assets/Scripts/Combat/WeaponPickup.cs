@@ -63,7 +63,7 @@ namespace RPG.Combat
         {
             if (Input.GetMouseButtonDown(0))
             {
-                callingController.SetMoveIndicator(transform.position);
+                // callingController.SetMoveIndicator(transform.position);
 
                 if (IsInRange(callingController))
                 {
@@ -82,6 +82,10 @@ namespace RPG.Combat
 
         public CursorType GetCursorType()
         {
+            if (healthToRestore > 0)
+            {
+                return CursorType.HealthPot;
+            }
             return CursorType.WeaponPickup;
         }
     }

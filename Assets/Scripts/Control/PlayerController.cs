@@ -24,8 +24,10 @@ namespace RPG.Control
         }
 
         [SerializeField] CursorMapping[] cursorMappings = null;
+        [SerializeField] float weaponCursorRange = 5f;
         [SerializeField] float maxNavMeshProjectionDistance = 1f;
         [SerializeField] float raycastRadius = 1f;
+
 
         private void Awake()
         {
@@ -47,6 +49,11 @@ namespace RPG.Control
             SetCursor(CursorType.None);
         }
 
+        public float GetWeaponCursorRange()
+        {
+            return weaponCursorRange;
+        }
+
         private bool InteractWithComponent()
         {
             RaycastHit[] hits = RaycastAllSorted();
@@ -63,18 +70,6 @@ namespace RPG.Control
                 }
             }
             return false;
-        }
-
-        private RaycastHit[] RaycastAllSorted()
-        {
-            RaycastHit[] hits = Physics.SphereCastAll(GetMouseRay(), raycastRadius);
-            float[] distances = new float[hits.Length];
-            for (int i = 0; i < hits.Length; i++)
-            {
-                distances[i] = hits[i].distance;
-            }
-            Array.Sort(distances, hits);
-            return hits;
         }
 
         private bool InteractWithUI()
@@ -97,12 +92,24 @@ namespace RPG.Control
                 if (Input.GetMouseButton(0))
                 {
                     GetComponent<Mover>().StartMoveAction(target, playerSpeed);
-                    SetMoveIndicator(target);
+                    // SetMoveIndicator(target);
                 }
                 SetCursor(CursorType.Movement);
                 return true;
             }
             return false;
+        }
+
+        private RaycastHit[] RaycastAllSorted()
+        {
+            RaycastHit[] hits = Physics.SphereCastAll(GetMouseRay(), raycastRadius);
+            float[] distances = new float[hits.Length];
+            for (int i = 0; i < hits.Length; i++)
+            {
+                distances[i] = hits[i].distance;
+            }
+            Array.Sort(distances, hits);
+            return hits;
         }
 
         public void SetMoveIndicator(Vector3 target)
@@ -113,7 +120,7 @@ namespace RPG.Control
             }
         }
 
-        private bool RaycastNavMesh(out Vector3 target)
+        public bool RaycastNavMesh(out Vector3 target)
         {
             target = new Vector3();
             RaycastHit hit;
