@@ -17,8 +17,8 @@ MonoBehaviour:
     type: 3}
   weaponRange: 2
   weaponDamage: 0
-  percentageBonus: 0
+  percentageBonus: 30
   isRightHanded: 1
   projectile: {fileID: 0}
   animationOverrides: 5
-  textUIColor: {r: 0.5849056, g: 0.1517444, b: 0.1850644, a: 1}
+  textUIColor: {r: 0.4528302, g: 0.4250623, b: 0.4270818, a: 1}

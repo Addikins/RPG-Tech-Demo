@@ -15,6 +15,8 @@ namespace RPG.Combat
         [SerializeField] Projectile projectile = null;
         [SerializeField] int animationOverrides = 1;
         [SerializeField] Color textUIColor = Color.white;
+        [Range(0, 4)]
+        [SerializeField] int equipInSlot = 0;
 
         const string weaponName = "Weapon";
 
@@ -112,6 +114,11 @@ namespace RPG.Combat
         public Color GetTextUIColor()
         {
             return textUIColor;
+        }
+
+        public int GetItemSlot()
+        {
+            return equipInSlot;
         }
     }
 }

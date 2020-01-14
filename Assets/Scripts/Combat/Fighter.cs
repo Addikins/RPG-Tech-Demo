@@ -70,6 +70,9 @@ namespace RPG.Combat
 
         public void EquipWeapon(WeaponConfig weapon)
         {
+            ItemSlots itemSlots = FindObjectOfType<ItemSlots>();
+            itemSlots.DisplayToggle(weapon);
+
             currentWeaponConfig = weapon;
             currentWeapon.value = AttachWeapon(weapon);
         }
@@ -227,7 +230,6 @@ namespace RPG.Combat
                 GameObject targetShaderSource = target.GetComponent<Fighter>().shaderSource;
                 targetShaderSource.GetComponent<Renderer>().material.SetColor("_OutlineColor", targetOutlineColor);
             }
-
         }
 
 
