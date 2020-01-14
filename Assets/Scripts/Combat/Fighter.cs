@@ -70,11 +70,14 @@ namespace RPG.Combat
 
         public void EquipWeapon(WeaponConfig weapon)
         {
-            ItemSlots itemSlots = FindObjectOfType<ItemSlots>();
-            itemSlots.DisplayToggle(weapon);
-
             currentWeaponConfig = weapon;
             currentWeapon.value = AttachWeapon(weapon);
+
+            if (gameObject.tag == "Player")
+            {
+                ItemSlots itemSlots = FindObjectOfType<ItemSlots>();
+                itemSlots.DisplayToggle(currentWeaponConfig);
+            }
         }
 
         private Weapon AttachWeapon(WeaponConfig weapon)

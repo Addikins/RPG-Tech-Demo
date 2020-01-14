@@ -120,7 +120,7 @@ namespace RPG.Attributes
             int randomAnimation = UnityEngine.Random.Range(0, deathAnimations);
             GetComponent<Animator>().SetTrigger("die" + randomAnimation);
             GetComponent<ActionScheduler>().CancelCurrentAction();
-            GetComponent<CapsuleCollider>().enabled = false;
+            // GetComponent<CapsuleCollider>().enabled = false;
 
             if (tag == "Player")
             {

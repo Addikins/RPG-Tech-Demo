@@ -2078,13 +2078,14 @@ GameObject:
   - component: {fileID: 6444704837517444892}
   - component: {fileID: 7251240701191172446}
   - component: {fileID: 7454963004980851279}
+  - component: {fileID: 5356734523642446322}
   m_Layer: 5
   m_Name: Item 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &9033204316230252972
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2199,6 +2200,20 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
+--- !u!114 &5356734523642446322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3948380862228531138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6afe9219aa6efc41895819f42c0a17f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemForThisSlot: {fileID: 11400000, guid: a43d0f04248aad647ad70f3610d6da67, type: 2}
+  isActive: 0
 --- !u!1 &4121029318251441033
 GameObject:
   m_ObjectHideFlags: 0
@@ -2717,13 +2732,14 @@ GameObject:
   - component: {fileID: 5481306810682835154}
   - component: {fileID: 1730238541502245061}
   - component: {fileID: 730691014388401821}
+  - component: {fileID: 2285190110689560500}
   m_Layer: 5
   m_Name: Item 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4923267288759361090
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2838,6 +2854,20 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
+--- !u!114 &2285190110689560500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4429618136457388642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6afe9219aa6efc41895819f42c0a17f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemForThisSlot: {fileID: 11400000, guid: 6773e9e5b34f8e440839e89eeca50139, type: 2}
+  isActive: 0
 --- !u!1 &4581343800331797473
 GameObject:
   m_ObjectHideFlags: 0
@@ -3016,7 +3046,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2155463119504897027
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3477,7 +3507,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1441995388520650911
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3546,6 +3576,7 @@ GameObject:
   - component: {fileID: 6894961585962704190}
   - component: {fileID: 155387337465303528}
   - component: {fileID: 7863334383399284930}
+  - component: {fileID: 322023728356547654}
   m_Layer: 5
   m_Name: Item 1
   m_TagString: Untagged
@@ -3666,7 +3697,21 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  m_IsOn: 1
+  m_IsOn: 0
+--- !u!114 &322023728356547654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6555473258375649268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6afe9219aa6efc41895819f42c0a17f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemForThisSlot: {fileID: 11400000, guid: de148dafd10995349ac7e09c1fbf606d, type: 2}
+  isActive: 0
 --- !u!1 &6741177378003436065
 GameObject:
   m_ObjectHideFlags: 0
@@ -3776,7 +3821,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4997827229986124864
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3925,13 +3970,14 @@ GameObject:
   - component: {fileID: 6179410129997703205}
   - component: {fileID: 6227926853178746360}
   - component: {fileID: 2433403706136206867}
+  - component: {fileID: 1380904561489254702}
   m_Layer: 5
   m_Name: Item 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &23711686404289038
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4046,6 +4092,20 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
+--- !u!114 &1380904561489254702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7543836076751688531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6afe9219aa6efc41895819f42c0a17f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemForThisSlot: {fileID: 11400000, guid: 70497cb6ce44ec646af5715204ff92f4, type: 2}
+  isActive: 0
 --- !u!1 &7716482150027532342
 GameObject:
   m_ObjectHideFlags: 0

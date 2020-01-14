@@ -228,7 +228,7 @@ MonoBehaviour:
   healthToRestore: 0
   respawnTime: 5
   pickupRange: 2
-  destroyOnPickup: 0
+  destroyOnPickup: 1
 --- !u!1 &8628065150845181740
 GameObject:
   m_ObjectHideFlags: 0
