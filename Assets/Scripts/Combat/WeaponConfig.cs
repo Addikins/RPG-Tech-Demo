@@ -14,6 +14,7 @@ namespace RPG.Combat
         [SerializeField] bool isRightHanded = true;
         [SerializeField] Projectile projectile = null;
         [SerializeField] int animationOverrides = 1;
+        [SerializeField] Color textUIColor = Color.white;
 
         const string weaponName = "Weapon";
 
@@ -106,6 +107,11 @@ namespace RPG.Combat
         public Weapon GetCurrentWeapon()
         {
             return equippedPrefab;
+        }
+
+        public Color GetTextUIColor()
+        {
+            return textUIColor;
         }
     }
 }

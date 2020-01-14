@@ -21,3 +21,4 @@ MonoBehaviour:
   isRightHanded: 1
   projectile: {fileID: 0}
   animationOverrides: 5
+  textUIColor: {r: 0.5849056, g: 0.1517444, b: 0.1850644, a: 1}

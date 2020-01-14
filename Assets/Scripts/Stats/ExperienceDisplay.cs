@@ -19,7 +19,7 @@ namespace RPG.Stats
         {
             textMeshPro.text = String.Format("{0} / {1}",
                 Mathf.Round(experience.GetExperiencePoints()),
-                Mathf.Round(experience.GetComponent<BaseStats>().ExpToLevelUp()));
+                Mathf.Round(experience.GetComponent<BaseStats>().ExpToNextLevelUp()));
         }
     }
 }

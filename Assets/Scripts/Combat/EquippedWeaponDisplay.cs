@@ -18,7 +18,9 @@ namespace RPG.Combat
 
         private void Update()
         {
-            textMeshPro.text = String.Format("{0}", fighter.GetWeapon().name);
+            WeaponConfig weapon = fighter.GetWeapon();
+            textMeshPro.color = weapon.GetTextUIColor();
+            textMeshPro.text = String.Format("{0}", weapon.name);
         }
     }
 }
