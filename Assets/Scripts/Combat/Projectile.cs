@@ -59,6 +59,7 @@ namespace RPG.Combat
 
         private void OnTriggerEnter(Collider other)
         {
+            if (target.IsDead()) { return; }
             if (other.tag != "Player" && other.tag != "Enemy")
             {
                 DestroyProjectile();
@@ -73,7 +74,6 @@ namespace RPG.Combat
                 return;
             }
 
-            if (target.IsDead()) { return; }
 
             onProjectileLand.Invoke();
             target.TakeDamage(instigator, damage);

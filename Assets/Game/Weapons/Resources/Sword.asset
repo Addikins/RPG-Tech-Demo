@@ -22,3 +22,4 @@ MonoBehaviour:
   projectile: {fileID: 0}
   animationOverrides: 1
   textUIColor: {r: 0.48883057, g: 0.6132076, b: 0.5968958, a: 1}
+  equipInSlot: 1

@@ -5,8 +5,8 @@ using RPG.Core;
 using RPG.SceneManagement;
 using GameDevTV.Utils;
 using UnityEngine.Events;
-using UnityEngine.SceneManagement;
 using System.Collections;
+using System;
 
 namespace RPG.Attributes
 {
@@ -19,6 +19,8 @@ namespace RPG.Attributes
         [SerializeField] UnityEvent onDie;
         [SerializeField] int deathAnimations = 2;
         [SerializeField] float onDeathLoadDelay = 3f;
+
+        public event Action<float> OnHealthChange = delegate { };
 
         [System.Serializable]
         public class TakeDamageEvent : UnityEvent<float> { }
@@ -52,6 +54,7 @@ namespace RPG.Attributes
         {
             healthPoints.value = Mathf.Min((healthPoints.value + healthToRestore), GetInitialHealth());
             gainHealth.Invoke(healthToRestore);
+
         }
 
         private void OnEnable()
@@ -73,6 +76,11 @@ namespace RPG.Attributes
         {
             healthPoints.value = Mathf.Max(healthPoints.value - damage, 0);
             takeDamage.Invoke(damage);
+
+            if (gameObject.tag == "Player")
+            {
+                OnHealthChange(GetHealthFraction());
+            }
 
             if (healthPoints.value == 0)
             {
@@ -134,6 +142,7 @@ namespace RPG.Attributes
         {
             float regenHealthPoints = GetComponent<BaseStats>().GetStat(Stat.Health) * (regenerationPercentage / 100);
             healthPoints.value = Mathf.Max(healthPoints.value, regenHealthPoints);
+            OnHealthChange(GetHealthFraction());
         }
 
         private void AwardExperience(GameObject instigator)
@@ -164,6 +173,7 @@ namespace RPG.Attributes
         public void RestoreState(object state)
         {
             healthPoints.value = (float)state;
+            OnHealthChange(GetHealthFraction());
 
             if (healthPoints.value == 0)
             {

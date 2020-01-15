@@ -23,3 +23,4 @@ MonoBehaviour:
     type: 3}
   animationOverrides: 1
   textUIColor: {r: 0.8679245, g: 0.35252005, b: 0.09416164, a: 1}
+  equipInSlot: 3
