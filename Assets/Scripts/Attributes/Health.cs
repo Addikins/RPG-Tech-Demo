@@ -175,7 +175,7 @@ namespace RPG.Attributes
             healthPoints.value = (float)state;
             OnHealthChange(GetHealthFraction());
 
-            if (healthPoints.value == 0)
+            if (healthPoints.value <= 0)
             {
                 TriggerDeath();
             }

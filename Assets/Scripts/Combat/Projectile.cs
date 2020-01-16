@@ -59,7 +59,8 @@ namespace RPG.Combat
 
         private void OnTriggerEnter(Collider other)
         {
-            if (target.IsDead()) { return; }
+            if (other.GetComponent<Health>().IsDead()) { return; }
+
             if (other.tag != "Player" && other.tag != "Enemy")
             {
                 DestroyProjectile();

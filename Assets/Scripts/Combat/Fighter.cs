@@ -259,6 +259,7 @@ namespace RPG.Combat
             string weaponName = (string)state;
             WeaponConfig weapon = UnityEngine.Resources.Load<WeaponConfig>(weaponName);
             EquipWeapon(weapon);
+            target = null;
         }
     }
 }
