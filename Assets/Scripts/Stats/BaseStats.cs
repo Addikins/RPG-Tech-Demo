@@ -31,6 +31,7 @@ namespace RPG.Stats
         private void Start()
         {
             currentLevel.ForceInit();
+            currentLevel.value = CalculateLevel();
         }
 
         private void OnEnable()

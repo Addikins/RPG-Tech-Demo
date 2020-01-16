@@ -161,12 +161,12 @@ PrefabInstance:
     - target: {fileID: 8696506102030671912, guid: 7f8511a5f30deeb4f8aa3471077bce11,
         type: 3}
       propertyPath: chaseDistance
-      value: 7
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8696506102030671912, guid: 7f8511a5f30deeb4f8aa3471077bce11,
         type: 3}
       propertyPath: suspicionTime
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8696506102030671912, guid: 7f8511a5f30deeb4f8aa3471077bce11,
         type: 3}

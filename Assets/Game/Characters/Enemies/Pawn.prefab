@@ -100,12 +100,17 @@ PrefabInstance:
     - target: {fileID: 8696506102030671912, guid: 7f8511a5f30deeb4f8aa3471077bce11,
         type: 3}
       propertyPath: shoutDistance
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8696506102030671912, guid: 7f8511a5f30deeb4f8aa3471077bce11,
         type: 3}
       propertyPath: waypointTolerance
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8696506102030671912, guid: 7f8511a5f30deeb4f8aa3471077bce11,
+        type: 3}
+      propertyPath: chaseDistance
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f8511a5f30deeb4f8aa3471077bce11, type: 3}
