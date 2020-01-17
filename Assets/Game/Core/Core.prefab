@@ -792,6 +792,21 @@ PrefabInstance:
       propertyPath: m_XAxis.Value
       value: 66.14073
       objectReference: {fileID: 0}
+    - target: {fileID: 808117111057217308, guid: 3691c19d9fb030448a5ee43a2ef513d7,
+        type: 3}
+      propertyPath: m_Rigs.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 808117111057217308, guid: 3691c19d9fb030448a5ee43a2ef513d7,
+        type: 3}
+      propertyPath: m_Rigs.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 808117111057217308, guid: 3691c19d9fb030448a5ee43a2ef513d7,
+        type: 3}
+      propertyPath: m_Rigs.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5895988317025309394, guid: 3691c19d9fb030448a5ee43a2ef513d7,
         type: 3}
       propertyPath: m_Lens.FieldOfView
@@ -1162,6 +1177,16 @@ PrefabInstance:
       propertyPath: healthComponenet
       value: 
       objectReference: {fileID: 2840793307899325793}
+    - target: {fileID: 4745050496175670110, guid: 9a82e505d17d5874ab0f090b1dcf8d86,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SwitchCameraMode
+      objectReference: {fileID: 0}
+    - target: {fileID: 4745050496175670110, guid: 9a82e505d17d5874ab0f090b1dcf8d86,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a82e505d17d5874ab0f090b1dcf8d86, type: 3}
 --- !u!224 &3235731081899690029 stripped

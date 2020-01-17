@@ -6,6 +6,7 @@ using RPG.Attributes;
 using RPG.Stats;
 using System.Collections.Generic;
 using GameDevTV.Utils;
+using System;
 
 namespace RPG.Combat
 {
@@ -20,7 +21,7 @@ namespace RPG.Combat
         [SerializeField] Color targetOutlineColor = Color.red;
         [SerializeField] Color defaultOutlineColor = Color.black;
         [Range(0, 1)]
-        [SerializeField] float outlineThickness = .02f;
+        [SerializeField] float defaultOutlineThickness = .02f;
 
         Health target;
         Health lastKnownTarget;
@@ -37,7 +38,7 @@ namespace RPG.Combat
 
         private void Start()
         {
-            shaderSource.GetComponent<Renderer>().material.SetFloat("_Outline", outlineThickness);
+            SetOutlineThickness(defaultOutlineThickness);
             currentWeapon.ForceInit();
         }
 
@@ -109,7 +110,7 @@ namespace RPG.Combat
 
         private void TriggerAttack()
         {
-            int randomAnimation = Random.Range(0, currentWeaponConfig.GetAnimationOverrides());
+            int randomAnimation = UnityEngine.Random.Range(0, currentWeaponConfig.GetAnimationOverrides());
             GetComponent<Animator>().ResetTrigger("stopAttack");
             GetComponent<Animator>().SetTrigger("attack" + randomAnimation);
         }
@@ -198,6 +199,11 @@ namespace RPG.Combat
             target = currentTarget;
 
             SetTargetOutlineColor();
+        }
+
+        public void SetOutlineThickness(float outlineThickness)
+        {
+            shaderSource.GetComponent<Renderer>().material.SetFloat("_Outline", outlineThickness);
         }
 
         private void CancelPreviousAttack(Health currentTarget)
