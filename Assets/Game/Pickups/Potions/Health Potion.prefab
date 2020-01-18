@@ -55,13 +55,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4000010533823780, guid: 2ff550236e0bc304e8144c9b9f92e378, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4000013521377066, guid: 2ff550236e0bc304e8144c9b9f92e378, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010533823780, guid: 2ff550236e0bc304e8144c9b9f92e378, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3984239415736728888, guid: 2ff550236e0bc304e8144c9b9f92e378,
         type: 3}
@@ -137,20 +137,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5671826411677773883, guid: 12718d935e0efb04f968557b9d5b27ed,
+    - target: {fileID: 3469726314413819689, guid: 12718d935e0efb04f968557b9d5b27ed,
         type: 3}
-      propertyPath: weapon
-      value: 
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 5671826411677773883, guid: 12718d935e0efb04f968557b9d5b27ed,
+    - target: {fileID: 6148805635868344043, guid: 12718d935e0efb04f968557b9d5b27ed,
         type: 3}
-      propertyPath: healthToRestore
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 5671826411677773883, guid: 12718d935e0efb04f968557b9d5b27ed,
-        type: 3}
-      propertyPath: destroyOnPickup
-      value: 1
+      propertyPath: m_RootOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3116233637885639707, guid: 12718d935e0efb04f968557b9d5b27ed,
         type: 3}
@@ -162,15 +157,20 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 0.7606815
       objectReference: {fileID: 0}
-    - target: {fileID: 6148805635868344043, guid: 12718d935e0efb04f968557b9d5b27ed,
+    - target: {fileID: 5671826411677773883, guid: 12718d935e0efb04f968557b9d5b27ed,
         type: 3}
-      propertyPath: m_RootOrder
-      value: 2
+      propertyPath: weapon
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 3469726314413819689, guid: 12718d935e0efb04f968557b9d5b27ed,
+    - target: {fileID: 5671826411677773883, guid: 12718d935e0efb04f968557b9d5b27ed,
         type: 3}
-      propertyPath: m_RootOrder
-      value: 3
+      propertyPath: healthToRestore
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5671826411677773883, guid: 12718d935e0efb04f968557b9d5b27ed,
+        type: 3}
+      propertyPath: destroyOnPickup
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12718d935e0efb04f968557b9d5b27ed, type: 3}

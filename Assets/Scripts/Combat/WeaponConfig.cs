@@ -96,6 +96,11 @@ namespace RPG.Combat
             return percentageBonus;
         }
 
+        public void AddWeaponDamage(float damage)
+        {
+            weaponDamage += damage;
+        }
+
         public float GetWeaponDamage()
         {
             return weaponDamage;

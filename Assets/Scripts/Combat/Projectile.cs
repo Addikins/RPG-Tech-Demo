@@ -59,7 +59,10 @@ namespace RPG.Combat
 
         private void OnTriggerEnter(Collider other)
         {
+            if (other.GetComponent<Health>())
+            {
             if (other.GetComponent<Health>().IsDead()) { return; }
+            }
 
             if (other.tag != "Player" && other.tag != "Enemy")
             {

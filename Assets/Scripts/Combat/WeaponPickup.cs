@@ -2,6 +2,7 @@
 using System.Collections;
 using RPG.Attributes;
 using RPG.Control;
+using RPG.Stats;
 using UnityEngine;
 
 namespace RPG.Combat
@@ -13,6 +14,7 @@ namespace RPG.Combat
         [SerializeField] float respawnTime = 5f;
         [SerializeField] float pickupRange = 2f;
         [SerializeField] bool destroyOnPickup = false;
+        [SerializeField] float attackBonus = 0f;
 
         private void OnTriggerEnter(Collider other)
         {
@@ -31,6 +33,10 @@ namespace RPG.Combat
             if (healthToRestore > 0)
             {
                 subject.GetComponent<Health>().Heal(healthToRestore);
+            }
+            if (attackBonus > 0)
+            {
+                subject.GetComponent<Fighter>().GetWeapon().AddWeaponDamage(attackBonus);
             }
             if (destroyOnPickup)
             {

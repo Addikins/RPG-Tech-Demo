@@ -19,6 +19,9 @@ namespace RPG.Attributes
         [SerializeField] UnityEvent onDie;
         [SerializeField] int deathAnimations = 2;
         [SerializeField] float onDeathLoadDelay = 3f;
+        [SerializeField] GameObject takeDamageVFX = null;
+        [SerializeField] GameObject deathVFX = null;
+        [SerializeField] GameObject healVFX = null;
 
         public event Action<float> OnHealthChange = delegate { };
 
@@ -54,6 +57,7 @@ namespace RPG.Attributes
         {
             healthPoints.value = Mathf.Min((healthPoints.value + healthToRestore), GetInitialHealth());
             gainHealth.Invoke(healthToRestore);
+            Instantiate(healVFX, transform.position + Vector3.up, Quaternion.identity);
 
         }
 
@@ -87,7 +91,9 @@ namespace RPG.Attributes
                 onDie.Invoke();
                 TriggerDeath();
                 AwardExperience(instigator);
+                return;
             }
+            Instantiate(takeDamageVFX, transform.position + Vector3.up, transform.rotation);
         }
 
         public float GetHealthPoints()
@@ -128,7 +134,10 @@ namespace RPG.Attributes
             int randomAnimation = UnityEngine.Random.Range(0, deathAnimations);
             GetComponent<Animator>().SetTrigger("die" + randomAnimation);
             GetComponent<ActionScheduler>().CancelCurrentAction();
+            
             // GetComponent<CapsuleCollider>().enabled = false;
+
+            Instantiate(deathVFX, transform.position + Vector3.up, Quaternion.identity);
 
             if (tag == "Player")
             {

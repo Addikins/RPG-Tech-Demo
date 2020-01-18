@@ -1,28 +1,23 @@
 using System;
-using RPG.Attributes;
+using RPG.Stats;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 namespace RPG.Combat
 {
     public class EnemyLevelDisplay : MonoBehaviour
     {
-        Fighter fighter;
+        [SerializeField] BaseStats baseStats;
+        TextMeshProUGUI textMeshPro;
 
         private void Awake()
         {
-            fighter = GameObject.FindWithTag("Player").GetComponent<Fighter>();
+            textMeshPro = GetComponent<TextMeshProUGUI>();
         }
 
         private void Update()
         {
-            if (fighter.GetTarget() == null)
-            {
-                GetComponent<Text>().text = "N/A";
-                return;
-            }
-            Health health = fighter.GetTarget();
-            GetComponent<Text>().text = String.Format("{0}", health.GetCurrentLevel());
+            textMeshPro.text = String.Format("{0}", baseStats.GetLevel());
         }
     }
 }
