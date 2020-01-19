@@ -1,16 +1,14 @@
 using System;
-using RPG.Attributes;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
+using RPG.Stats;
 
 namespace RPG.Combat
 {
-    public class EnemyDamageDisplay : MonoBehaviour
+    public class EnemyClassDisplay : MonoBehaviour
     {
         Fighter fighter;
         TextMeshProUGUI textMeshPro;
-
 
         private void Awake()
         {
@@ -22,11 +20,11 @@ namespace RPG.Combat
         {
             if (fighter.GetTarget() == null)
             {
-                textMeshPro.text = "---";
+                textMeshPro.text = "--------";
                 return;
             }
-            Health health = fighter.GetTarget();
-            textMeshPro.text = String.Format("{0}", Mathf.Round(health.GetAttackDamage()));
+            BaseStats baseStats = fighter.GetTarget().GetComponent<BaseStats>();
+            textMeshPro.text = String.Format("{0}", baseStats.GetCharacterClass());
         }
     }
 }

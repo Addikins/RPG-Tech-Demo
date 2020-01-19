@@ -1,24 +1,30 @@
 using System;
 using RPG.Attributes;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
 namespace RPG.Combat
 {
     public class EnemyHealthDisplay : MonoBehaviour
     {
-        [SerializeField] Health health = null;
+        Fighter fighter;
         TextMeshProUGUI textMeshPro;
 
         private void Awake()
         {
+            fighter = GameObject.FindWithTag("Player").GetComponent<Fighter>();
             textMeshPro = GetComponent<TextMeshProUGUI>();
         }
 
         private void Update()
         {
-            textMeshPro.text = String.Format("{0} / {1}", health.GetHealthPoints(), health.GetMaxHealth());
+            if (fighter.GetTarget() == null)
+            {
+                textMeshPro.text = "--- / ---";
+                return;
+            }
+            Health health = fighter.GetTarget();
+            textMeshPro.text = String.Format("{0} / {1}", Mathf.Round(health.GetHealthPoints()), Mathf.Round(health.GetMaxHealth()));
         }
     }
 }

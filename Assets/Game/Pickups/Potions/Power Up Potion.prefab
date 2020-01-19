@@ -185,7 +185,7 @@ PrefabInstance:
     - target: {fileID: 5671826411677773883, guid: 12718d935e0efb04f968557b9d5b27ed,
         type: 3}
       propertyPath: attackBonus
-      value: 15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5671826411677773883, guid: 12718d935e0efb04f968557b9d5b27ed,
         type: 3}
