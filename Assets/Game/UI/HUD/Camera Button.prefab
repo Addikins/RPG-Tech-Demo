@@ -216,5 +216,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b60cc0993641a624fa268bbbc887b159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  perspectiveCharacterOutline: 0.1
-  orthographicCharacterOutline: 0.02
+  perspectiveCharacterOutline: 0.05
+  orthographicCharacterOutline: 0.03

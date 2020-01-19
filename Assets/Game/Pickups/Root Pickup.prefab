@@ -64,6 +64,8 @@ MonoBehaviour:
   healthToRestore: 0
   respawnTime: 5
   pickupRange: 2
+  destroyOnPickup: 0
+  attackBonus: 0
 --- !u!1 &8067088778474971464
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,7 +127,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
