@@ -14,22 +14,25 @@ namespace RPG.Attributes
 
         private void Update()
         {
-            if (healthComponenet.IsDead() && !isPlayer)
+            if (!isPlayer)
             {
-                timeDead += Time.deltaTime;
-                if (timeDead >= disableDelayTime)
+                if (healthComponenet.IsDead())
+                {
+                    timeDead += Time.deltaTime;
+                    if (timeDead >= disableDelayTime)
+                    {
+                        rootCanvas.enabled = false;
+                        return;
+                    }
+                }
+
+                if (Mathf.Approximately(healthComponenet.GetHealthFraction(), 1))
                 {
                     rootCanvas.enabled = false;
                     return;
                 }
+                rootCanvas.enabled = true;
             }
-
-            if (!isPlayer && Mathf.Approximately(healthComponenet.GetHealthFraction(), 1))
-            {
-                rootCanvas.enabled = false;
-                return;
-            }
-            else if (!isPlayer) { rootCanvas.enabled = true; }
 
             foreground.localScale = new Vector3(healthComponenet.GetHealthFraction(), 1, 1);
 

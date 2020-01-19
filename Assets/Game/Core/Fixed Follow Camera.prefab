@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1647275589911694861}
   - component: {fileID: 1647275589911694862}
+  - component: {fileID: 841460542404049321}
   m_Layer: 0
   m_Name: Fixed Follow Camera
   m_TagString: Untagged
@@ -69,6 +70,18 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1647275589965144557}
+--- !u!114 &841460542404049321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647275589911694860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8005ec10309ecc24fa9178aad6fa7189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1647275589965144556
 GameObject:
   m_ObjectHideFlags: 0
