@@ -2311,7 +2311,7 @@ PrefabInstance:
     - target: {fileID: 4543896212170973520, guid: 6da9e9bb890775449b3df6194873893b,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.23030573
+      value: 0.23030575
       objectReference: {fileID: 0}
     - target: {fileID: 4543896212170973520, guid: 6da9e9bb890775449b3df6194873893b,
         type: 3}
@@ -2321,7 +2321,7 @@ PrefabInstance:
     - target: {fileID: 4543896212170973520, guid: 6da9e9bb890775449b3df6194873893b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.32828483
+      value: 0.3282848
       objectReference: {fileID: 0}
     - target: {fileID: 4543896212170973520, guid: 6da9e9bb890775449b3df6194873893b,
         type: 3}
@@ -2346,7 +2346,7 @@ PrefabInstance:
     - target: {fileID: 799168779791397414, guid: 6da9e9bb890775449b3df6194873893b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.32828483
+      value: 0.3282848
       objectReference: {fileID: 0}
     - target: {fileID: 799168779791397414, guid: 6da9e9bb890775449b3df6194873893b,
         type: 3}
@@ -2361,7 +2361,7 @@ PrefabInstance:
     - target: {fileID: 799168779791397414, guid: 6da9e9bb890775449b3df6194873893b,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.23030573
+      value: 0.23030575
       objectReference: {fileID: 0}
     - target: {fileID: 799168779791397414, guid: 6da9e9bb890775449b3df6194873893b,
         type: 3}
@@ -2581,6 +2581,11 @@ PrefabInstance:
         type: 3}
       propertyPath: orthographic size
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4543896212170973533, guid: 6da9e9bb890775449b3df6194873893b,
+        type: 3}
+      propertyPath: m_AllowDynamicResolution
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6da9e9bb890775449b3df6194873893b, type: 3}
@@ -4531,10 +4536,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b6defd0bab00fe745a536aa9ddb51af9, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 40
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: b6defd0bab00fe745a536aa9ddb51af9, type: 3}
       propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b6defd0bab00fe745a536aa9ddb51af9, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b6defd0bab00fe745a536aa9ddb51af9, type: 3}
@@ -4597,6 +4606,30 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2e3b6b8e9676cfc4992b67056307d2df, type: 2}
+    - target: {fileID: 2300000, guid: b6defd0bab00fe745a536aa9ddb51af9, type: 3}
+      propertyPath: m_ReflectionProbeUsage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b6defd0bab00fe745a536aa9ddb51af9, type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: b6defd0bab00fe745a536aa9ddb51af9, type: 3}
+      propertyPath: waterMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: b6defd0bab00fe745a536aa9ddb51af9, type: 3}
+      propertyPath: reflectLayers.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: b6defd0bab00fe745a536aa9ddb51af9, type: 3}
+      propertyPath: disablePixelLights
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: b6defd0bab00fe745a536aa9ddb51af9, type: 3}
+      propertyPath: refractLayers.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6defd0bab00fe745a536aa9ddb51af9, type: 3}
 --- !u!4 &1979369011 stripped
@@ -5049,7 +5082,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
