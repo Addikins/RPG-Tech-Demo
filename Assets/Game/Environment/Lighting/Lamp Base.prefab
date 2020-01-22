@@ -48,7 +48,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &755378526249763687
 Transform:
@@ -97,7 +97,7 @@ Light:
   m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 5
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 2
@@ -112,6 +112,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: eb0c470b950cc554da50e41b62c10c48, type: 3}
       propertyPath: m_Name
       value: Static Fire Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: eb0c470b950cc554da50e41b62c10c48, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: eb0c470b950cc554da50e41b62c10c48, type: 3}
       propertyPath: m_LocalPosition.x
@@ -175,6 +179,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: bcc4adfd816ba2c4b8b292385ca86a8e, type: 3}
       propertyPath: m_Name
       value: Lamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bcc4adfd816ba2c4b8b292385ca86a8e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bcc4adfd816ba2c4b8b292385ca86a8e, type: 3}
       propertyPath: m_LocalPosition.x
