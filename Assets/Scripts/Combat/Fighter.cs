@@ -203,6 +203,7 @@ namespace RPG.Combat
 
         public void SetOutlineThickness(float outlineThickness)
         {
+            if (shaderSource == null) { return; }
             shaderSource.GetComponent<Renderer>().material.SetFloat("_Outline", outlineThickness);
         }
 

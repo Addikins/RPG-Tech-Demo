@@ -13,7 +13,7 @@ namespace RPG.Combat
         [SerializeField] float healthToRestore = 0;
         [SerializeField] float respawnTime = 5f;
         [SerializeField] float pickupRange = 2f;
-        [SerializeField] bool destroyOnPickup = false;
+        [SerializeField] bool disableOnPickup = false;
         [SerializeField] float attackBonus = 0f;
 
         private void OnTriggerEnter(Collider other)
@@ -38,9 +38,9 @@ namespace RPG.Combat
             {
                 subject.GetComponent<Fighter>().GetWeapon().AddWeaponDamage(attackBonus);
             }
-            if (destroyOnPickup)
+            if (disableOnPickup)
             {
-                Destroy(gameObject);
+                gameObject.SetActive(false);
                 return;
             }
             StartCoroutine(HideForSeconds(respawnTime));
