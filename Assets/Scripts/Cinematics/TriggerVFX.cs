@@ -6,14 +6,14 @@ namespace RPG.Cinematics
     {
         [SerializeField] GameObject VFXToTrigger;
         [SerializeField] Transform triggerLocation;
-        [SerializeField] bool destroyOnTrigger = true;
+        private bool alreadyTriggered;
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Player"))
+            if (other.CompareTag("Player") && !alreadyTriggered)
             {
-                Instantiate(VFXToTrigger, triggerLocation, true);
-                gameObject.SetActive(!destroyOnTrigger);
+                Instantiate(VFXToTrigger, triggerLocation);
+                alreadyTriggered = true;
             }
         }
     }

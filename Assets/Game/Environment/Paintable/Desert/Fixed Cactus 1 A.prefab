@@ -89,6 +89,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fixed Cactus 1 A
       objectReference: {fileID: 0}
+    - target: {fileID: 1228221559030420848, guid: aff02cabe4d2f874d9b424647b7176d4,
+        type: 3}
+      propertyPath: m_Height
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4584355277978660301, guid: aff02cabe4d2f874d9b424647b7176d4,
         type: 3}
       propertyPath: m_LODs.Array.data[0].renderers.Array.size
