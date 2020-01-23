@@ -74,7 +74,7 @@ namespace RPG.Combat
             currentWeaponConfig = weapon;
             currentWeapon.value = AttachWeapon(weapon);
 
-            if (gameObject.tag == "Player")
+            if (gameObject.CompareTag("Player"))
             {
                 ItemSlots itemSlots = FindObjectOfType<ItemSlots>();
                 itemSlots.DisplayToggle(currentWeaponConfig);
@@ -220,7 +220,7 @@ namespace RPG.Combat
 
         private void SetTargetOutlineColor()
         {
-            if (gameObject.tag != "Player") { return; }
+            if (!gameObject.CompareTag("Player")) { return; }
 
             // Failsafe, may or may not be necessary
             if (target == null && lastKnownTarget == null) { return; }

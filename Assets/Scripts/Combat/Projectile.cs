@@ -59,26 +59,29 @@ namespace RPG.Combat
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.GetComponent<Health>())
-            {
-            if (other.GetComponent<Health>().IsDead()) { return; }
-            }
-
-            if (other.tag != "Player" && other.tag != "Enemy")
-            {
-                DestroyProjectile();
-                return;
-            }
-            if (other.tag == "Player" && passThroughPlayer) { return; }
-            if (other.tag == "Enemy" && passThroughEnemy) { return; }
-
-            if (other != target.GetComponent<Collider>() || other.GetComponent<TerrainCollider>())
+            Health otherHealth;
+            if (!other.CompareTag("Player") && !other.CompareTag("Enemy"))
             {
                 DestroyProjectile();
                 return;
             }
 
+            otherHealth = other.GetComponent<Health>();
+            if (otherHealth.IsDead()) { return; }
 
+            if (other.CompareTag("Player") && passThroughPlayer) { return; }
+            if (other.CompareTag("Enemy") && passThroughEnemy) { return; }
+
+            // if (other != target.GetComponent<Collider>() || other.GetComponent<TerrainCollider>())
+            // {
+            //     DestroyProjectile();
+            //     return;
+            // }
+
+            if (otherHealth != target)
+            {
+                target = otherHealth;
+            }
             onProjectileLand.Invoke();
             target.TakeDamage(instigator, damage);
             if (hitEffect != null)

@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Health Pot
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012970591572, guid: 2ff550236e0bc304e8144c9b9f92e378, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010690109084, guid: 2ff550236e0bc304e8144c9b9f92e378, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -68,6 +72,24 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3984239415736728888, guid: 2ff550236e0bc304e8144c9b9f92e378,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012503029934, guid: 2ff550236e0bc304e8144c9b9f92e378, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011889971296, guid: 2ff550236e0bc304e8144c9b9f92e378, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3984239413632182870, guid: 2ff550236e0bc304e8144c9b9f92e378,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ff550236e0bc304e8144c9b9f92e378, type: 3}
 --- !u!1001 &1926315718036405943
@@ -81,6 +103,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Health Potion
+      objectReference: {fileID: 0}
+    - target: {fileID: 3502767071117090940, guid: 12718d935e0efb04f968557b9d5b27ed,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5495930763581899670, guid: 12718d935e0efb04f968557b9d5b27ed,
         type: 3}
@@ -171,6 +198,21 @@ PrefabInstance:
         type: 3}
       propertyPath: destroyOnPickup
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3469726314413529865, guid: 12718d935e0efb04f968557b9d5b27ed,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305835173967117327, guid: 12718d935e0efb04f968557b9d5b27ed,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8067088778474971464, guid: 12718d935e0efb04f968557b9d5b27ed,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12718d935e0efb04f968557b9d5b27ed, type: 3}

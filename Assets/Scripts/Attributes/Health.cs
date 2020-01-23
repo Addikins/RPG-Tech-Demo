@@ -81,7 +81,7 @@ namespace RPG.Attributes
             healthPoints.value = Mathf.Max(healthPoints.value - damage, 0);
             takeDamage.Invoke(damage);
 
-            if (gameObject.tag == "Player")
+            if (gameObject.CompareTag("Player"))
             {
                 OnHealthChange(GetHealthFraction());
             }
@@ -139,7 +139,7 @@ namespace RPG.Attributes
 
             Instantiate(deathVFX, transform.position + Vector3.up, Quaternion.identity);
 
-            if (tag == "Player")
+            if (gameObject.CompareTag("Player"))
             {
                 SavingWrapper savingWrapper = FindObjectOfType<SavingWrapper>();
                 // StartCoroutine(savingWrapper.LoadLastScene());

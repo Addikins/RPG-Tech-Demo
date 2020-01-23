@@ -18,7 +18,7 @@ namespace RPG.Combat
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.tag == "Player")
+            if (other.CompareTag("Player"))
             {
                 Pickup(other.gameObject);
             }
@@ -58,7 +58,7 @@ namespace RPG.Combat
             GetComponent<Collider>().enabled = shouldShow;
             foreach (Transform child in transform)
             {
-                if (child.gameObject.tag != "Pickup Effect")
+                if (!child.gameObject.CompareTag("Pickup Effect"))
                 {
                     child.gameObject.SetActive(shouldShow);
                 }
