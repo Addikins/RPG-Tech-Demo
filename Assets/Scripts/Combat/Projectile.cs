@@ -84,6 +84,7 @@ namespace RPG.Combat
             }
             onProjectileLand.Invoke();
             target.TakeDamage(instigator, damage);
+
             if (hitEffect != null)
             {
                 Instantiate(hitEffect, GetAimLocation(), transform.rotation);
