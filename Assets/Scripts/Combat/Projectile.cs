@@ -54,7 +54,7 @@ namespace RPG.Combat
             {
                 return target.transform.position;
             }
-            return target.transform.position + Vector3.up * targetCapsule.height / 2;
+            return target.transform.position + targetCapsule.center;
         }
 
         private void OnTriggerEnter(Collider other)

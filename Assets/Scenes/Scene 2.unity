@@ -1048,6 +1048,11 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: 817216f7-c7de-4b6e-aabf-2babb425a016
       objectReference: {fileID: 0}
+    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
+        type: 3}
+      propertyPath: startingLevel
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: patrolPath
@@ -1057,11 +1062,6 @@ PrefabInstance:
         type: 3}
       propertyPath: waypointTolerance
       value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
-        type: 3}
-      propertyPath: startingLevel
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2573851544582703635, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
@@ -1353,6 +1353,11 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: e008f7be-ddcb-4b09-8158-be1ee639d160
       objectReference: {fileID: 0}
+    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
+        type: 3}
+      propertyPath: startingLevel
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: patrolPath
@@ -1362,11 +1367,6 @@ PrefabInstance:
         type: 3}
       propertyPath: waypointTolerance
       value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
-        type: 3}
-      propertyPath: startingLevel
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2573851544582703635, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
@@ -3888,16 +3888,16 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: b1db5f0f-59d2-4da9-951d-8700833fcddb
       objectReference: {fileID: 0}
-    - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
-        type: 3}
-      propertyPath: patrolPath
-      value: 
-      objectReference: {fileID: 240747711}
     - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: startingLevel
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
+        type: 3}
+      propertyPath: patrolPath
+      value: 
+      objectReference: {fileID: 240747711}
     - target: {fileID: 2573851544582703635, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -4615,22 +4615,22 @@ PrefabInstance:
     - target: {fileID: 4472621415597813030, guid: 6da9e9bb890775449b3df6194873893b,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.03026658
+      value: 0.030266574
       objectReference: {fileID: 0}
     - target: {fileID: 4472621415597813030, guid: 6da9e9bb890775449b3df6194873893b,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9692107
+      value: 0.96921074
       objectReference: {fileID: 0}
     - target: {fileID: 4472621415597813030, guid: 6da9e9bb890775449b3df6194873893b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.15587498
+      value: -0.155875
       objectReference: {fileID: 0}
     - target: {fileID: 4472621415597813030, guid: 6da9e9bb890775449b3df6194873893b,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.18819562
+      value: 0.18819557
       objectReference: {fileID: 0}
     - target: {fileID: 4472621415597813030, guid: 6da9e9bb890775449b3df6194873893b,
         type: 3}
@@ -5777,6 +5777,16 @@ PrefabInstance:
       propertyPath: chaseDistance
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 2400230856697778237, guid: a43daa12bf93e604ba1f11c4b105d19c,
+        type: 3}
+      propertyPath: startingLevel
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2400230856697778237, guid: a43daa12bf93e604ba1f11c4b105d19c,
+        type: 3}
+      propertyPath: characterClass
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6832066967665198727, guid: a43daa12bf93e604ba1f11c4b105d19c,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -5843,16 +5853,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 6773e9e5b34f8e440839e89eeca50139,
         type: 2}
-    - target: {fileID: 2400230856697778237, guid: a43daa12bf93e604ba1f11c4b105d19c,
-        type: 3}
-      propertyPath: startingLevel
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 2400230856697778237, guid: a43daa12bf93e604ba1f11c4b105d19c,
-        type: 3}
-      propertyPath: characterClass
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 2327578024768860126, guid: a43daa12bf93e604ba1f11c4b105d19c,
         type: 3}
       propertyPath: disableDelayTime
@@ -6288,6 +6288,11 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: a4927661-0e37-44c2-963f-76ed34ca325b
       objectReference: {fileID: 0}
+    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
+        type: 3}
+      propertyPath: startingLevel
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: patrolPath
@@ -6342,11 +6347,6 @@ PrefabInstance:
         type: 3}
       propertyPath: defaultOutlineColor.b
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
-        type: 3}
-      propertyPath: startingLevel
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2573851544582703635, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
@@ -6740,16 +6740,16 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: 6c0d1c07-4c97-48b6-a9df-7d4d390cdc63
       objectReference: {fileID: 0}
-    - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
-        type: 3}
-      propertyPath: patrolPath
-      value: 
-      objectReference: {fileID: 240747711}
     - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: startingLevel
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
+        type: 3}
+      propertyPath: patrolPath
+      value: 
+      objectReference: {fileID: 240747711}
     - target: {fileID: 2573851544582703635, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -7070,6 +7070,11 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: 44880dc5-1a09-4e99-81e0-61fa27cc43a9
       objectReference: {fileID: 0}
+    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
+        type: 3}
+      propertyPath: startingLevel
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: patrolPath
@@ -7079,11 +7084,6 @@ PrefabInstance:
         type: 3}
       propertyPath: waypointTolerance
       value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
-        type: 3}
-      propertyPath: startingLevel
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2573851544582703635, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
@@ -7648,16 +7648,16 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: e100b282-738a-4443-9584-8366de65489b
       objectReference: {fileID: 0}
-    - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
-        type: 3}
-      propertyPath: patrolPath
-      value: 
-      objectReference: {fileID: 240747711}
     - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: startingLevel
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
+        type: 3}
+      propertyPath: patrolPath
+      value: 
+      objectReference: {fileID: 240747711}
     - target: {fileID: 2573851544582703635, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -8333,6 +8333,11 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: 8e8f8a61-3a5e-4c5c-8700-ff172cd4bfdd
       objectReference: {fileID: 0}
+    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
+        type: 3}
+      propertyPath: startingLevel
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: patrolPath
@@ -8387,11 +8392,6 @@ PrefabInstance:
         type: 3}
       propertyPath: defaultOutlineColor.b
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
-        type: 3}
-      propertyPath: startingLevel
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2573851544582703635, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
@@ -10366,6 +10366,11 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: 3ce333a2-a71e-42d1-8024-890d302afb1a
       objectReference: {fileID: 0}
+    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
+        type: 3}
+      propertyPath: startingLevel
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: patrolPath
@@ -10420,11 +10425,6 @@ PrefabInstance:
         type: 3}
       propertyPath: defaultOutlineColor.b
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
-        type: 3}
-      propertyPath: startingLevel
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2573851544582703635, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
@@ -10731,6 +10731,11 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: bbdf2e30-9bde-4665-a6fa-2d82b450b085
       objectReference: {fileID: 0}
+    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
+        type: 3}
+      propertyPath: startingLevel
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: patrolPath
@@ -10785,11 +10790,6 @@ PrefabInstance:
         type: 3}
       propertyPath: defaultOutlineColor.b
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
-        type: 3}
-      propertyPath: startingLevel
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2573851544582703635, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
@@ -11413,6 +11413,11 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: 8aa8dc62-5780-46f1-b8a6-22a0e0c8e15a
       objectReference: {fileID: 0}
+    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
+        type: 3}
+      propertyPath: startingLevel
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: patrolPath
@@ -11422,11 +11427,6 @@ PrefabInstance:
         type: 3}
       propertyPath: waypointTolerance
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
-        type: 3}
-      propertyPath: startingLevel
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2573851544582703635, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
@@ -12535,6 +12535,11 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: 4acce90a-0229-4012-ada4-31578a18bc4e
       objectReference: {fileID: 0}
+    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
+        type: 3}
+      propertyPath: startingLevel
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: patrolPath
@@ -12589,11 +12594,6 @@ PrefabInstance:
         type: 3}
       propertyPath: defaultOutlineColor.b
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
-        type: 3}
-      propertyPath: startingLevel
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2573851544582703635, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
@@ -12885,16 +12885,16 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: 1442033c-3f77-4b8d-964a-893655f22a2a
       objectReference: {fileID: 0}
-    - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
-        type: 3}
-      propertyPath: patrolPath
-      value: 
-      objectReference: {fileID: 240747711}
     - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: startingLevel
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
+        type: 3}
+      propertyPath: patrolPath
+      value: 
+      objectReference: {fileID: 240747711}
     - target: {fileID: 2573851544582703635, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -13515,6 +13515,11 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: 3c5974c3-b2a3-48cc-ad99-b5ed74e95577
       objectReference: {fileID: 0}
+    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
+        type: 3}
+      propertyPath: startingLevel
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: patrolPath
@@ -13569,11 +13574,6 @@ PrefabInstance:
         type: 3}
       propertyPath: defaultOutlineColor.b
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
-        type: 3}
-      propertyPath: startingLevel
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2573851544582703635, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
@@ -14181,16 +14181,16 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: fb8003b0-b2e5-4c78-b734-c96a38395ce5
       objectReference: {fileID: 0}
-    - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
-        type: 3}
-      propertyPath: patrolPath
-      value: 
-      objectReference: {fileID: 240747711}
     - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: startingLevel
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
+        type: 3}
+      propertyPath: patrolPath
+      value: 
+      objectReference: {fileID: 240747711}
     - target: {fileID: 2573851544582703635, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -14795,6 +14795,11 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: bc3ad4d9-2111-4638-b59f-34bcd45a7bca
       objectReference: {fileID: 0}
+    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
+        type: 3}
+      propertyPath: startingLevel
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: patrolPath
@@ -14849,11 +14854,6 @@ PrefabInstance:
         type: 3}
       propertyPath: defaultOutlineColor.b
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
-        type: 3}
-      propertyPath: startingLevel
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2573851544582703635, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
@@ -15685,6 +15685,11 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: 843a2093-2dc5-4d22-bd38-0a249888f6e7
       objectReference: {fileID: 0}
+    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
+        type: 3}
+      propertyPath: startingLevel
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: patrolPath
@@ -15694,11 +15699,6 @@ PrefabInstance:
         type: 3}
       propertyPath: waypointTolerance
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
-        type: 3}
-      propertyPath: startingLevel
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2573851544582703635, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
@@ -16116,6 +16116,11 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: 82b3adb7-e666-4fb0-9272-fa25e431a5bc
       objectReference: {fileID: 0}
+    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
+        type: 3}
+      propertyPath: startingLevel
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: patrolPath
@@ -16125,11 +16130,6 @@ PrefabInstance:
         type: 3}
       propertyPath: waypointTolerance
       value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
-        type: 3}
-      propertyPath: startingLevel
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2573851544582703635, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
@@ -18067,6 +18067,11 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: 7b219b6e-70eb-48f9-88d8-5491b618bb1f
       objectReference: {fileID: 0}
+    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
+        type: 3}
+      propertyPath: startingLevel
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: patrolPath
@@ -18121,11 +18126,6 @@ PrefabInstance:
         type: 3}
       propertyPath: defaultOutlineColor.b
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
-        type: 3}
-      propertyPath: startingLevel
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2573851544582703635, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
@@ -18948,6 +18948,11 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: 6f8de9b4-0e08-45ca-92ba-7206a44821ae
       objectReference: {fileID: 0}
+    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
+        type: 3}
+      propertyPath: startingLevel
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: patrolPath
@@ -19002,11 +19007,6 @@ PrefabInstance:
         type: 3}
       propertyPath: defaultOutlineColor.b
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
-        type: 3}
-      propertyPath: startingLevel
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2573851544582703635, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
@@ -20581,16 +20581,16 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: 874302a3-eb91-4048-a038-67129109a6e7
       objectReference: {fileID: 0}
-    - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
-        type: 3}
-      propertyPath: patrolPath
-      value: 
-      objectReference: {fileID: 240747711}
     - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: startingLevel
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
+        type: 3}
+      propertyPath: patrolPath
+      value: 
+      objectReference: {fileID: 240747711}
     - target: {fileID: 2573851544582703635, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -21065,6 +21065,11 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: 28e887d3-3ce6-421e-9f11-27ecc830e58d
       objectReference: {fileID: 0}
+    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
+        type: 3}
+      propertyPath: startingLevel
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: patrolPath
@@ -21074,11 +21079,6 @@ PrefabInstance:
         type: 3}
       propertyPath: waypointTolerance
       value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
-        type: 3}
-      propertyPath: startingLevel
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2573851544582703635, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
@@ -22505,6 +22505,11 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: 80443285-7a9f-41b5-9de2-08d789354f50
       objectReference: {fileID: 0}
+    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
+        type: 3}
+      propertyPath: startingLevel
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: patrolPath
@@ -22559,11 +22564,6 @@ PrefabInstance:
         type: 3}
       propertyPath: defaultOutlineColor.b
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
-        type: 3}
-      propertyPath: startingLevel
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2573851544582703635, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
@@ -23008,6 +23008,11 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: f85286c9-2bbd-4e3a-ac74-2319cb92e4d9
       objectReference: {fileID: 0}
+    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
+        type: 3}
+      propertyPath: startingLevel
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: patrolPath
@@ -23062,11 +23067,6 @@ PrefabInstance:
         type: 3}
       propertyPath: defaultOutlineColor.b
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
-        type: 3}
-      propertyPath: startingLevel
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2573851544582703635, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
@@ -23373,6 +23373,11 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: e58aed35-2662-472c-a407-10c43795ba28
       objectReference: {fileID: 0}
+    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
+        type: 3}
+      propertyPath: startingLevel
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: patrolPath
@@ -23427,11 +23432,6 @@ PrefabInstance:
         type: 3}
       propertyPath: defaultOutlineColor.b
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
-        type: 3}
-      propertyPath: startingLevel
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2573851544582703635, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
@@ -23846,16 +23846,16 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: 4bf0ca4b-16d2-4aa8-b2b0-8288ec3969ea
       objectReference: {fileID: 0}
-    - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
-        type: 3}
-      propertyPath: patrolPath
-      value: 
-      objectReference: {fileID: 240747711}
     - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: startingLevel
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
+        type: 3}
+      propertyPath: patrolPath
+      value: 
+      objectReference: {fileID: 240747711}
     - target: {fileID: 2573851544582703635, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -24281,6 +24281,11 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: f01a69bf-ec7f-44f9-884f-187fc6266f33
       objectReference: {fileID: 0}
+    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
+        type: 3}
+      propertyPath: startingLevel
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: patrolPath
@@ -24335,11 +24340,6 @@ PrefabInstance:
         type: 3}
       propertyPath: defaultOutlineColor.b
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
-        type: 3}
-      propertyPath: startingLevel
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2573851544582703635, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
@@ -25261,16 +25261,16 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: 1ee182f6-b528-4d29-a312-040ab7092dbd
       objectReference: {fileID: 0}
-    - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
-        type: 3}
-      propertyPath: patrolPath
-      value: 
-      objectReference: {fileID: 240747711}
     - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: startingLevel
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
+        type: 3}
+      propertyPath: patrolPath
+      value: 
+      objectReference: {fileID: 240747711}
     - target: {fileID: 2573851544582703635, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -25803,6 +25803,11 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: ade96347-ea6e-4743-a79e-294fc7884487
       objectReference: {fileID: 0}
+    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
+        type: 3}
+      propertyPath: startingLevel
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: patrolPath
@@ -25857,11 +25862,6 @@ PrefabInstance:
         type: 3}
       propertyPath: defaultOutlineColor.b
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
-        type: 3}
-      propertyPath: startingLevel
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2573851544582703635, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
@@ -26168,6 +26168,11 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: 4b7ddadb-b9ba-4597-8170-f20528702fe4
       objectReference: {fileID: 0}
+    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
+        type: 3}
+      propertyPath: startingLevel
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: patrolPath
@@ -26222,11 +26227,6 @@ PrefabInstance:
         type: 3}
       propertyPath: defaultOutlineColor.b
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
-        type: 3}
-      propertyPath: startingLevel
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2573851544582703635, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}

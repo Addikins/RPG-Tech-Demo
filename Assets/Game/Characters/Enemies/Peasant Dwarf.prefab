@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 176675604144482243, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: m_Name
-      value: Dwarf Peasant
+      value: Peasant Dwarf
       objectReference: {fileID: 0}
     - target: {fileID: 8430393671859422077, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
@@ -87,6 +87,11 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: 6ff9d987-02ce-4ad1-9654-3f4dbce80ba3
       objectReference: {fileID: 0}
+    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
+        type: 3}
+      propertyPath: startingLevel
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6224167854241936075, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
       propertyPath: patrolPath
@@ -137,10 +142,10 @@ PrefabInstance:
       propertyPath: defaultOutlineColor.b
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1312463099266842891, guid: b24ce6a95bb36f8418ee1ba058d745cd,
+    - target: {fileID: 5483949379486905581, guid: b24ce6a95bb36f8418ee1ba058d745cd,
         type: 3}
-      propertyPath: startingLevel
-      value: 2
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b24ce6a95bb36f8418ee1ba058d745cd, type: 3}

@@ -94,6 +94,18 @@ namespace RPG.Control
                     GetComponent<Mover>().StartMoveAction(target, playerSpeed);
                     // SetMoveIndicator(target);
                 }
+                else if (Input.GetButton("Vertical"))
+                {
+                    Vector3 destination;
+                    if (Input.GetAxis("Vertical") > 0)
+                    {
+                        destination = transform.forward;
+                    }
+                    else { destination = transform.forward * -1; }
+                    
+                    target = transform.position + destination;
+                    GetComponent<Mover>().StartMoveAction(target, playerSpeed);
+                }
                 SetCursor(CursorType.Movement);
                 return true;
             }

@@ -17,6 +17,11 @@ PrefabInstance:
       propertyPath: passThroughEnemy
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2910050506160056194, guid: 812a0ce62ab4ae14989198eef5ea08a2,
+        type: 3}
+      propertyPath: maxLifeTime
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8183981145113991878, guid: 812a0ce62ab4ae14989198eef5ea08a2,
         type: 3}
       propertyPath: m_LocalPosition.x

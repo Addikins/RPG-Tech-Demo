@@ -67,7 +67,22 @@ PrefabInstance:
     - target: {fileID: 6615524285133518575, guid: 2692f638194f83a48a7381b4eeca822f,
         type: 3}
       propertyPath: m_Name
-      value: Fireball
+      value: Equipped Fireball
+      objectReference: {fileID: 0}
+    - target: {fileID: 7003620805090704354, guid: 2692f638194f83a48a7381b4eeca822f,
+        type: 3}
+      propertyPath: onHit.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7003620805090704354, guid: 2692f638194f83a48a7381b4eeca822f,
+        type: 3}
+      propertyPath: onHit.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7003620805090704354, guid: 2692f638194f83a48a7381b4eeca822f,
+        type: 3}
+      propertyPath: onHit.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6615524285133518572, guid: 2692f638194f83a48a7381b4eeca822f,
         type: 3}
