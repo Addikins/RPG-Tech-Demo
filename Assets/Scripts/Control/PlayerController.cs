@@ -97,12 +97,8 @@ namespace RPG.Control
                 else if (Input.GetButton("Vertical"))
                 {
                     Vector3 destination;
-                    if (Input.GetAxis("Vertical") > 0)
-                    {
-                        destination = transform.forward;
-                    }
-                    else { destination = transform.forward * -1; }
-                    
+                    destination = new Vector3(transform.forward.x, transform.forward.y, transform.forward.z * Input.GetAxis("Vertical"));
+                    print(Input.GetAxis("Vertical"));
                     target = transform.position + destination;
                     GetComponent<Mover>().StartMoveAction(target, playerSpeed);
                 }
