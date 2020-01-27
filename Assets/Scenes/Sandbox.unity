@@ -11879,7 +11879,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6819001897270324715}
-  m_LocalRotation: {x: -0.042641327, y: -0.5992937, z: 0.42344654, w: 0.678028}
+  m_LocalRotation: {x: -0.04264143, y: -0.5992937, z: 0.4234466, w: 0.67802787}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -13926,7 +13926,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4543896212890962973}
-  m_LocalRotation: {x: 0.20007214, y: 0.4870338, z: -0.115692414, w: 0.8422497}
+  m_LocalRotation: {x: 0.20007214, y: 0.48703378, z: -0.115692414, w: 0.8422497}
   m_LocalPosition: {x: 20.742592, y: 7.5446033, z: -26.589489}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -16741,8 +16741,6 @@ GameObject:
   - component: {fileID: 4543896212854312830}
   - component: {fileID: 1197812292256468412}
   - component: {fileID: 848848233269024761}
-  - component: {fileID: 6945196418320355623}
-  - component: {fileID: 6945196418320355622}
   m_Layer: 2
   m_Name: Player
   m_TagString: Player
@@ -16750,38 +16748,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &6945196418320355622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6945196418320355621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 521b611700410be45810047f0a74e899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &6945196418320355623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6945196418320355621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MovingTurnSpeed: 360
-  m_StationaryTurnSpeed: 5
-  m_JumpPower: 12
-  m_GravityMultiplier: 2
-  m_RunCycleLegOffset: 0.2
-  m_MoveSpeedMultiplier: 1
-  m_AnimSpeedMultiplier: 1
-  m_GroundCheckDistance: 0.1
 --- !u!1 &6970142498885668624
 GameObject:
   m_ObjectHideFlags: 0

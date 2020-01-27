@@ -36,6 +36,7 @@ namespace RPG.Control
 
         void Update()
         {
+            InputMovement();
             if (InteractWithUI()) { return; }
             if (health.IsDead())
             {
@@ -47,6 +48,20 @@ namespace RPG.Control
 
             if (InteractWithMovement()) { return; }
             SetCursor(CursorType.None);
+        }
+
+        private void InputMovement()
+        {
+            if (Input.GetButton("Horizontal"))
+            {
+                gameObject.transform.Rotate(0, Input.GetAxis("Horizontal"), 0);
+            }
+            if (Input.GetButton("Vertical"))
+            {
+                Vector3 destination = transform.position + transform.forward;
+
+                GetComponent<Mover>().StartMoveAction(destination, playerSpeed);
+            }
         }
 
         public float GetWeaponCursorRange()
@@ -93,14 +108,6 @@ namespace RPG.Control
                 {
                     GetComponent<Mover>().StartMoveAction(target, playerSpeed);
                     // SetMoveIndicator(target);
-                }
-                else if (Input.GetButton("Vertical"))
-                {
-                    Vector3 destination;
-                    destination = new Vector3(transform.forward.x, transform.forward.y, transform.forward.z * Input.GetAxis("Vertical"));
-                    print(Input.GetAxis("Vertical"));
-                    target = transform.position + destination;
-                    GetComponent<Mover>().StartMoveAction(target, playerSpeed);
                 }
                 SetCursor(CursorType.Movement);
                 return true;
