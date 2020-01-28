@@ -27,7 +27,7 @@ namespace RPG.Control
         [SerializeField] float weaponCursorRange = 5f;
         [SerializeField] float maxNavMeshProjectionDistance = 1f;
         [SerializeField] float raycastRadius = 1f;
-
+        [SerializeField] float rotationSpeed = 5f;
 
         private void Awake()
         {
@@ -36,7 +36,7 @@ namespace RPG.Control
 
         void Update()
         {
-            InputMovement();
+            if (!health.IsDead()) { InputMovement(); }
             if (InteractWithUI()) { return; }
             if (health.IsDead())
             {
@@ -54,7 +54,7 @@ namespace RPG.Control
         {
             if (Input.GetButton("Horizontal"))
             {
-                gameObject.transform.Rotate(0, Input.GetAxis("Horizontal"), 0);
+                gameObject.transform.Rotate(0, Input.GetAxis("Horizontal") * rotationSpeed, 0);
             }
             if (Input.GetButton("Vertical"))
             {
