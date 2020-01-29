@@ -28,15 +28,24 @@ namespace RPG.Control
         [SerializeField] float maxNavMeshProjectionDistance = 1f;
         [SerializeField] float raycastRadius = 1f;
         [SerializeField] float rotationSpeed = 5f;
+        // [SerializeField] Transform followCamera;
+        // Vector3 cameraForward;
+        Vector3 destination;
+        float originSpeed;
 
         private void Awake()
         {
             health = GetComponent<Health>();
+            originSpeed = playerSpeed;
         }
+
+        // private void Start()
+        // {
+        //     followCamera = GameObject.FindGameObjectWithTag("Follow Camera").transform;
+        // }
 
         void Update()
         {
-            if (!health.IsDead()) { InputMovement(); }
             if (InteractWithUI()) { return; }
             if (health.IsDead())
             {
@@ -49,19 +58,40 @@ namespace RPG.Control
             if (InteractWithMovement()) { return; }
             SetCursor(CursorType.None);
         }
+        private void FixedUpdate()
+        {
+            if (!health.IsDead()) { InputMovement(); }
+        }
 
         private void InputMovement()
         {
+            // float horizontalMovement = Input.GetAxis("Horizontal");
+            // float verticalMovement = Input.GetAxis("Vertical");
+
+            // cameraForward = Vector3.Scale(followCamera.forward, new Vector3(1, 0, 1)).normalized;
+
+            // destination = verticalMovement * cameraForward +
+            //  horizontalMovement * followCamera.right;
+            if (Input.GetKey(KeyCode.LeftShift)) { playerSpeed = originSpeed * .5f; }
+            else { playerSpeed = originSpeed; }
+
+
             if (Input.GetButton("Horizontal"))
             {
                 gameObject.transform.Rotate(0, Input.GetAxis("Horizontal") * rotationSpeed, 0);
             }
             if (Input.GetButton("Vertical"))
             {
-                Vector3 destination = transform.position + transform.forward;
-
+                destination = transform.position + transform.forward;
                 GetComponent<Mover>().StartMoveAction(destination, playerSpeed);
             }
+
+            // if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
+            // {
+            //     print("Camera Pos: " + followCamera.position + "\nCamera Forward: " + followCamera.forward + "\nDestination: " + destination);
+            //     GetComponent<Mover>().StartMoveAction(destination, playerSpeed);
+            // }
+
         }
 
         public float GetWeaponCursorRange()

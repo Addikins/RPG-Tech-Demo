@@ -46,6 +46,8 @@ namespace RPG.Combat
         {
             timeSinceLastAttack += Time.deltaTime;
 
+            if (gameObject.CompareTag("Player")) { InputCombat(); }
+
             if (target == null) return;
             if (target.IsDead())
             {
@@ -99,12 +101,23 @@ namespace RPG.Combat
 
         private void AttackBehavior()
         {
-            transform.LookAt(target.transform);
+            if (target != null)
+            {
+                transform.LookAt(target.transform);
+            }
             if (timeSinceLastAttack >= timeBetweenAttacks)
             {
                 // Triggers Hit() Event
                 TriggerAttack();
                 timeSinceLastAttack = 0f;
+            }
+        }
+
+        private void InputCombat()
+        {
+            if (Input.GetButtonDown("Attack"))
+            {
+                AttackBehavior();
             }
         }
 

@@ -30,12 +30,12 @@ namespace RPG.Combat
 
         private void Update()
         {
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
             if (target == null) { return; }
             if (isHoming && !target.IsDead())
             {
                 transform.LookAt(GetAimLocation());
             }
-            transform.Translate(Vector3.forward * speed * Time.deltaTime);
         }
 
         public void SetTarget(Health target, GameObject instigator, float damage)
