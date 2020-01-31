@@ -46,7 +46,7 @@ namespace RPG.Combat
         {
             timeSinceLastAttack += Time.deltaTime;
 
-            if (gameObject.CompareTag("Player")) { InputCombat(); }
+            // if (gameObject.CompareTag("Player")) { InputCombat(); }
 
             if (target == null) return;
             if (target.IsDead())
