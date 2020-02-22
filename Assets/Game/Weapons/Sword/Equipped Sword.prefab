@@ -90,8 +90,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &8029512248712384075
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -151,6 +149,20 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 31b16fd87cf33014c946e9d512d1e03c, type: 2}
+    - target: {fileID: 2386212, guid: 13af847dfa6dbe844ba4b7c902f98f67, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64883148019054208, guid: 13af847dfa6dbe844ba4b7c902f98f67,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64924450474238042, guid: 13af847dfa6dbe844ba4b7c902f98f67,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13af847dfa6dbe844ba4b7c902f98f67, type: 3}
 --- !u!4 &8029512248712049733 stripped
@@ -166,11 +178,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2439710028257441614}
     m_Modifications:
-    - target: {fileID: 3098211662407278191, guid: e5cf53e77d028144e80a4286d814fd81,
-        type: 3}
-      propertyPath: m_Name
-      value: Melee Weapon
-      objectReference: {fileID: 0}
     - target: {fileID: 1296999345911453357, guid: e5cf53e77d028144e80a4286d814fd81,
         type: 3}
       propertyPath: audioClips.Array.size
@@ -226,6 +233,11 @@ PrefabInstance:
       propertyPath: parentObject
       value: 
       objectReference: {fileID: 8029512249626612025}
+    - target: {fileID: 3098211662407278191, guid: e5cf53e77d028144e80a4286d814fd81,
+        type: 3}
+      propertyPath: m_Name
+      value: Melee Weapon
+      objectReference: {fileID: 0}
     - target: {fileID: 4701638408329377526, guid: e5cf53e77d028144e80a4286d814fd81,
         type: 3}
       propertyPath: m_LocalPosition.x
