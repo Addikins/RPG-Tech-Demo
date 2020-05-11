@@ -42,7 +42,7 @@ namespace RPG.SceneManagement
             SavingWrapper wrapper = FindObjectOfType<SavingWrapper>();
 
             //Remove control from player
-            PlayerController playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+            ThirdPersonCharacterController playerController = GameObject.FindWithTag("Player").GetComponent<ThirdPersonCharacterController>();
             playerController.enabled = false;
 
             yield return fader.FadeOut(fadeOutTime);
@@ -51,7 +51,7 @@ namespace RPG.SceneManagement
             yield return SceneManager.LoadSceneAsync(sceneToLoad);
 
             // Remove control from "new" player
-            PlayerController newPlayerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+            ThirdPersonCharacterController newPlayerController = GameObject.FindWithTag("Player").GetComponent<ThirdPersonCharacterController>();
             newPlayerController.enabled = false;
 
             wrapper.Load();

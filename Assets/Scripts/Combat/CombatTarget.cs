@@ -7,9 +7,9 @@ namespace RPG.Combat
     [RequireComponent(typeof(Health))]
     public class CombatTarget : MonoBehaviour, IRaycastable
     {
-        PlayerController player;
+        ThirdPersonCharacterController player;
 
-        public bool HandleRaycast(PlayerController callingController)
+        public bool HandleRaycast(ThirdPersonCharacterController callingController)
         {
             player = callingController;
             if (!callingController.GetComponent<Fighter>().CanAttack(gameObject))

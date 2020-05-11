@@ -1,12 +1,15 @@
 ﻿using System;
 using UnityEngine;
+using RPG.Attributes;
+using UnityEngine.AI;
+using UnityEngine.EventSystems;
 
 namespace RPG.Control
 {
 
     public class ThirdPersonCharacterController : MonoBehaviour
     {
-
+        [Header("Movement")]
         [SerializeField] float gravity = -10f;
         [SerializeField] float walkSpeed = 2f;
         [SerializeField] float runSpeed = 6f;
@@ -15,20 +18,31 @@ namespace RPG.Control
         [SerializeField] float maxRollTime = 1f;
         [SerializeField] float rollDelay = .25f;
         [SerializeField] float fallDelay = .2f;
+        [SerializeField] float bonusSpeedMultiplier = 1.5f;
+        [SerializeField] bool hasSpeedBonus = true;
         [SerializeField] float speedSmoothTime = 0.15f;
         [SerializeField] float turnSmoothTime = 0.2f;
+        [Header("Animations")]
         [SerializeField] float walkingAnimationSpeed = .5f;
         [SerializeField] float runningAnimationSpeed = 1f;
         [SerializeField] float rollingAnimationSpeed = 1f;
         [SerializeField] float maxAnimationSpeed = 1.5f;
-        [SerializeField] float bonusSpeedMultiplier = 1.5f;
-        [SerializeField] bool hasSpeedBonus = true;
+        [SerializeField] int idleAnimationsCount = 47;
+        [Header("Combat")]
         [SerializeField] float attackCooldown = .5f;
         [SerializeField] float attackTime = .5f;
-        [SerializeField] int idleAnimationsCount = 47;
-        private State state;
-        private float timeSpentRolling;
-        private float timeSinceLastIdleAnimation;
+        [Header("Raycasts & Cursors")]
+        [SerializeField] CursorMapping[] cursorMappings = null;
+        [SerializeField] float weaponCursorRange = 5f;
+        [SerializeField] float raycastRadius = 1f;
+
+        [System.Serializable]
+        struct CursorMapping
+        {
+            public CursorType type;
+            public Texture2D texture;
+            public Vector2 hotspot;
+        }
 
         private enum State
         {
@@ -38,15 +52,21 @@ namespace RPG.Control
             Attacking,
         }
 
+        private State state;
+        private float timeSpentRolling;
+        private float timeSinceLastIdleAnimation;
+
         private float currentRunSpeed;
         private float maxSpeed;
         private float defaultRunAnimation;
         private float distanceToGround;
-        private Vector3 velocity;
         private float velocityY;
         private float timeOffGround;
         private float timeAttacking;
         private float timeSinceLastAttack;
+        private float timeSinceLastInput;
+        private float idleInterval = 3f;
+        private Vector3 velocity;
 
         float turnSmoothVelocity;
         float speedSmoothVelocity;
@@ -54,25 +74,45 @@ namespace RPG.Control
         Transform cameraT;
         Animator animator;
         CharacterController controller;
-        private float timeSinceLastInput;
-        private float idleInterval = 3f;
+        Health health;
 
-        void Start()
+
+        private void Awake()
         {
-            state = State.Normal;
+            health = GetComponent<Health>();
             animator = GetComponent<Animator>();
-
-            cameraT = Camera.main.transform;
+            controller = GetComponent<CharacterController>();
+            state = State.Normal;
             defaultRunAnimation = runningAnimationSpeed;
             currentSpeed = walkSpeed;
             maxSpeed = runSpeed * bonusSpeedMultiplier;
+        }
 
-            // distanceToGround = GetComponent<SphereCollider> ().bounds.extents.y;
-            controller = GetComponent<CharacterController>();
-
+        void Start()
+        {
+            cameraT = Camera.main.transform;
         }
 
         void Update()
+        {
+            if (InteractWithUI()) { return; }
+            if (health.IsDead())
+            {
+                SetCursor(CursorType.Dead);
+                return;
+            }
+            if (InteractWithComponent()) { return; }
+
+            //if (InteractWithMovement()) { return; }
+            SetCursor(CursorType.None);
+        }
+
+        private void FixedUpdate()
+        {
+            CheckState();
+        }
+
+        private void CheckState()
         {
             switch (state)
             {
@@ -98,9 +138,99 @@ namespace RPG.Control
             }
         }
 
+        private bool InteractWithComponent()
+        {
+            RaycastHit[] hits = RaycastAllSorted();
+            foreach (RaycastHit hit in hits)
+            {
+                IRaycastable[] raycastables = hit.transform.GetComponents<IRaycastable>();
+                foreach (IRaycastable raycastable in raycastables)
+                {
+                    if (raycastable.HandleRaycast(this))
+                    {
+                        SetCursor(raycastable.GetCursorType());
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        private bool InteractWithUI()
+        {
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                SetCursor(CursorType.UI);
+                return true;
+            }
+            return false;
+        }
+
+        private RaycastHit[] RaycastAllSorted()
+        {
+            RaycastHit[] hits = Physics.SphereCastAll(GetMouseRay(), raycastRadius);
+            float[] distances = new float[hits.Length];
+            for (int i = 0; i < hits.Length; i++)
+            {
+                distances[i] = hits[i].distance;
+            }
+            Array.Sort(distances, hits);
+            return hits;
+        }
+
+        //public void SetMoveIndicator(Vector3 target)
+        //{
+        //    if (Input.GetMouseButtonDown(0))
+        //    {
+        //        Instantiate(movementIndicator, (target + (Vector3.up / 8)), Quaternion.Euler(-90, 0, 0));
+        //    }
+        //}
+
+        //public bool RaycastNavMesh(out Vector3 target)
+        //{
+        //    target = new Vector3();
+        //    RaycastHit hit;
+        //    bool hasHit = Physics.Raycast(GetMouseRay(), out hit);
+        //    if (!hasHit) { return false; }
+
+        //    NavMeshHit navMeshHit;
+        //    bool hasCastToNavMesh = NavMesh.SamplePosition(
+        //        hit.point, out navMeshHit, maxNavMeshProjectionDistance, NavMesh.AllAreas);
+
+        //    if (!hasCastToNavMesh) { return false; }
+
+        //    target = navMeshHit.position;
+
+        //    return true;
+        //}
+
+        private void SetCursor(CursorType type)
+        {
+            CursorMapping mapping = GetCursorMapping(type);
+            Cursor.SetCursor(mapping.texture, mapping.hotspot, CursorMode.Auto);
+        }
+
+        private CursorMapping GetCursorMapping(CursorType type)
+        {
+            foreach (CursorMapping mapping in cursorMappings)
+            {
+                if (mapping.type == type)
+                {
+                    return mapping;
+                }
+            }
+            return cursorMappings[0];
+        }
+
+        private static Ray GetMouseRay()
+        {
+            return Camera.main.ScreenPointToRay(Input.mousePosition);
+        }
+
         private void Movement()
         {
-            if (Input.GetKeyDown(KeyCode.LeftControl)) {
+            if (Input.GetKeyDown(KeyCode.LeftControl))
+            {
                 hasSpeedBonus = !hasSpeedBonus;
             }
 
@@ -170,15 +300,10 @@ namespace RPG.Control
         private void Falling()
         {
             HandleMovement();
-            // controller.Move (velocity * Time.deltaTime);
-            // transform.Translate (transform.forward * currentSpeed * Time.deltaTime, Space.World);
         }
 
         private void CheckGround()
         {
-            // isGrounded = Physics.Raycast (transform.position + (Vector3.up * .2f) + (Vector3.forward * .1f), Vector3.down, distanceToGround + 0.5f) ||
-            //     Physics.Raycast (transform.position + (Vector3.up * .2f) + (Vector3.forward * -.1f), Vector3.down, distanceToGround + 0.5f) ||
-            //     Physics.Raycast (transform.position + (Vector3.up * .2f), Vector3.down, distanceToGround + 0.5f);
             if (controller.isGrounded)
             {
                 animator.SetBool("isGrounded", controller.isGrounded);
@@ -254,9 +379,15 @@ namespace RPG.Control
             }
         }
 
+        public float GetWeaponCursorRange()
+        {
+            return weaponCursorRange;
+        }
+
         public void SetIdleInterveral(float interval)
         {
             idleInterval = interval;
         }
+
     }
 }

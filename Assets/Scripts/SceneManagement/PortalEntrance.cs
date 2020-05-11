@@ -5,12 +5,12 @@ namespace RPG.SceneManagement
 {
     public class PortalEntrance : MonoBehaviour, IRaycastable
     {
-        public bool HandleRaycast(PlayerController callingController)
+        public bool HandleRaycast(ThirdPersonCharacterController callingController)
         {
             if (Input.GetMouseButtonDown(0))
             {
                 // callingController.SetMoveIndicator(transform.position);
-                callingController.InteractWithMovement();
+                //callingController.InteractWithMovement();
             }
             return true;
         }

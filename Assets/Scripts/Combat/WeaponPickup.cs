@@ -65,7 +65,7 @@ namespace RPG.Combat
             }
         }
 
-        public bool HandleRaycast(PlayerController callingController)
+        public bool HandleRaycast(ThirdPersonCharacterController callingController)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -76,12 +76,12 @@ namespace RPG.Combat
                     Pickup(callingController.gameObject);
                     return true;
                 }
-                callingController.InteractWithMovement();
+                //callingController.InteractWithMovement();
             }
             return true;
         }
 
-        private bool IsInRange(PlayerController callingController)
+        private bool IsInRange(ThirdPersonCharacterController callingController)
         {
             return Vector3.Distance(transform.position, callingController.transform.position) < pickupRange;
         }

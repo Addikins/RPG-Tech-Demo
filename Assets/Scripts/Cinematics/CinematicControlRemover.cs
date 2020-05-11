@@ -30,13 +30,13 @@ namespace RPG.Cinematics
         {
             // Cancels current action and prevents further actions during cinematics
             player.GetComponent<ActionScheduler>().CancelCurrentAction();
-            player.GetComponent<PlayerController>().enabled = false;
+            player.GetComponent<ThirdPersonCharacterController>().enabled = false;
         }
 
         void EnableControl(PlayableDirector director)
         {
             // Re-enables control to player after cinematic finishes
-            player.GetComponent<PlayerController>().enabled = true;
+            player.GetComponent<ThirdPersonCharacterController>().enabled = true;
         }
 
     }
